@@ -964,7 +964,7 @@ input[type="checkbox"]:checked + span:before {
 
 /* ------------- *Modal -------------- */
 
-.modal, .modal_bid, .modal_vacancy, .modal_code {
+.modal, .modal_bid, .modal_vacancy, .modal_code, .modal_code_1 {
   z-index: 191;
   display: none;
   position: fixed;
@@ -1000,7 +1000,7 @@ input[type="checkbox"]:checked + span:before {
   opacity: .5;
 }
 
-.modal h2, .modal_bid h2, .modal_vacancy h2, .modal_code h2 {
+.modal h2, .modal_bid h2, .modal_vacancy h2, .modal_code h2, .modal_code_1 h2 {
   color: #505050;
 }
 

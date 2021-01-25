@@ -1,7 +1,7 @@
 
 <!-- Modal -->
 
-<div class="modal_code modal_code_code">
+<div class="modal_code_1 modal_code_code">
     <div class="fullScreen flex-center">
         <div class="modal__box__code">
             <div class="modal__head text-center">

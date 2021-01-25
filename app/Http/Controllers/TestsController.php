@@ -25,7 +25,7 @@ class TestsController extends Controller
             return redirect()->route('index');
         }
         $data['test'] = Test::where('course_id', $id)->firstOrFail();
-        $data['questions'] = $data['test']->questions->shuffle();
+        $data['questions'] = $data['test']->questions->shuffle()->take(15);
         $data['breadcrumbs'] = ['Тест'];
         $course_code = CourseCode::where('code', session()->get('course_code'))->where('user_id', auth()->id())->where('course_id', $id)->where('is_activated', false)->firstOrFail();
         $course_code->is_activated = true;

@@ -227,7 +227,7 @@
   .video__box iframe {
     height: 290px;
   }
-  .modal h2, .modal_bid h2, .modal_vacancy h2, .modal_code h2 {
+  .modal h2, .modal_bid h2, .modal_vacancy h2, .modal_code h2,.modal_code_1 h2  {
     font-size: 26px;
   }
 }

@@ -68,12 +68,12 @@ $(document).ready(function () {
     });
 
     $('.modal__close__code').on('click', function() {
-        $('.modal_code').fadeOut();
+        $('.modal_code_1').fadeOut();
     });
     $(document).click(function(event) {
         if ($(event.target).closest('.open-modal-btn-code').length
             || $(event.target).closest('.modal__box__code').length ) return;
-        $('.modal_code').fadeOut();
+        $('.modal_code_1').fadeOut();
         event.stopPropagation();
     });
 
