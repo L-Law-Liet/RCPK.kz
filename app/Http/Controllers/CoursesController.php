@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use App\Models\CourseCode;
 use App\Models\Material;
 use App\Services\CourseService;
@@ -31,7 +32,6 @@ class CoursesController extends Controller
             session(['course_id' => $course_code->course_id]);
             session(['course_code' => $course_code->code]);
         }
-
         return redirect()->route('cabinet');
     }
 }

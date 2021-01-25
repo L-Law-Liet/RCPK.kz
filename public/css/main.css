@@ -964,7 +964,7 @@ input[type="checkbox"]:checked + span:before {
 
 /* ------------- *Modal -------------- */
 
-.modal {
+.modal, .modal_bid, .modal_vacancy, .modal_code {
   z-index: 191;
   display: none;
   position: fixed;
@@ -978,24 +978,29 @@ input[type="checkbox"]:checked + span:before {
   min-height: 100%;
 }
 
-.modal__box {
+.modal__box, .modal__box__bid, .modal__box__vacancy, .modal__box__code {
   background: #fff;
   padding: 50px 30px;
   border-radius: 5px;
   position: relative;
   max-width: 440px;width: 96%;
 }
-
-.modal__close {
+.news-img {
+    width: 30% !important;
+}
+.news-content {
+    width: 70% !important;
+}
+.modal__close, .modal__close__bid, .modal__close__vacancy, .modal__close__code {
   position: absolute;
   top: 10px;right: 10px;
 }
 
-.modal__close:hover {
+.modal__close:hover, .modal__close__bid:hover, .modal__close__vacancy:hover, .modal__close__code:hover {
   opacity: .5;
 }
 
-.modal h2 {
+.modal h2, .modal_bid h2, .modal_vacancy h2, .modal_code h2 {
   color: #505050;
 }
 

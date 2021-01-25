@@ -1,7 +1,12 @@
 @extends('layouts.app')
 @section('content')
 
-    <p class="cabinet__link text-center" style="margin-bottom: 3rem;"><a href="#" class="btn btn_blue open-modal-btn">Ввыдите код</a></p>
+    <p class="cabinet__link text-center" style="margin-bottom: 3rem;">
+        <a class="btn btn_blue open-modal-btn">Введите код</a>
+
+        <a class="open-modal-btn-code"
+           style="display: block; margin-top: 1rem; cursor: pointer">Как получить код?</a>
+    </p>
       <!-- Cabinet -->
 
       <section class="cabinet">
@@ -17,7 +22,7 @@
                               <p class="cabinet__info">
                                   {{$course->body}}
                               </p>
-                              <p class="cabinet__btn"><a  @if(session()->get('course_id') == $course->id)href="{{route('video', $course->id)}}" class="btn btn_blue" @endif>Пройти курс</a></p>
+                              <p class="cabinet__btn"><a  @if(session()->get('course_id') == $course->id)href="{{route('video', $course->id)}}" class="btn btn_blue" @else style="background: #777; color: white; padding: 0.5rem; cursor: not-allowed; border-radius: 4px" @endif>Пройти курс</a></p>
                           </div>
                       </div>
                   @endforeach
@@ -32,4 +37,5 @@
   <div class="overlay"></div>
 
     @include('layouts.modals.code')
+    @include('layouts.modals.code-help')
 @endsection

@@ -26,7 +26,7 @@ class AuthController extends Controller
         $pwd = $data['password'];
         $data['password'] = Hash::make($data['password']);
         $user = User::create($data);
-        $this->service->sendEmail($user->id);
+//        $this->service->sendEmail($user->id);
         return $this->authenticate($user->email, $pwd);
     }
     public function login(Request $request){

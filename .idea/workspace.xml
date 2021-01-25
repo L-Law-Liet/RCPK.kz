@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f6f7563-e07e-4048-893d-b0b5213d97e1" name="Default Changelist" comment="" />
+    <list id="744c86b4-e9f5-442e-9efd-fb9f3d61ba96" name="sql with option idx" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +11,16 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -137,6 +148,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1mdnpWFzBrlQw3O2xASnzX2TGwK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -146,18 +158,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/mails" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\domains\nidge\RCAS\resources\views\layouts\modals" />
+      <recent name="D:\OpenServer\domains\nidge\RCAS\resources\views" />
       <recent name="D:\OpenServer\domains\nidge\RCAS\resources\views\mails" />
       <recent name="D:\OpenServer\domains\nidge\RCAS\resources\views\auth" />
-      <recent name="D:\OpenServer\domains\nidge\RCAS\resources\views" />
       <recent name="D:\OpenServer\domains\nidge\RCAS\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\domains\nidge\RCAS\public\css" />
+      <recent name="D:\OpenServer\domains\nidge\RCAS" />
       <recent name="D:\OpenServer\domains\nidge\RCAS\resources\views\render" />
       <recent name="D:\OpenServer\domains\nidge\RCAS\resources\views\auth" />
     </key>
@@ -172,6 +188,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9f6f7563-e07e-4048-893d-b0b5213d97e1" name="Default Changelist" comment="" />
+      <changelist id="744c86b4-e9f5-442e-9efd-fb9f3d61ba96" name="sql with option idx" comment="" />
       <created>1609832518807</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -189,10 +206,44 @@
       <workItem from="1610333779606" duration="15622000" />
       <workItem from="1610363609663" duration="20669000" />
       <workItem from="1610428870397" duration="9514000" />
+      <workItem from="1610452001234" duration="845000" />
+      <workItem from="1610509914805" duration="26000" />
+      <workItem from="1610532559048" duration="186000" />
+      <workItem from="1610546688833" duration="754000" />
+      <workItem from="1610552161373" duration="581000" />
+      <workItem from="1610706580719" duration="2565000" />
+      <workItem from="1610942063152" duration="876000" />
+      <workItem from="1610957903269" duration="21448000" />
+      <workItem from="1610986003101" duration="90000" />
+      <workItem from="1611043753313" duration="2842000" />
+      <workItem from="1611051959242" duration="75000" />
+      <workItem from="1611120869644" duration="17059000" />
+      <workItem from="1611158551137" duration="587000" />
+      <workItem from="1611159417178" duration="1955000" />
+      <workItem from="1611202418899" duration="12514000" />
+      <workItem from="1611242294351" duration="4535000" />
+      <workItem from="1611284353052" duration="11117000" />
+      <workItem from="1611323557814" duration="420000" />
+      <workItem from="1611381188255" duration="1346000" />
+      <workItem from="1611398889723" duration="34407000" />
+      <workItem from="1611505438877" duration="60000" />
+      <workItem from="1611542115466" duration="4445000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

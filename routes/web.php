@@ -22,11 +22,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home',  [PagesController::class, 'index'])->name('index');
-Route::get('/',  function (){
-    return redirect()->route('index');
-});
-Route::post('/home', [PagesController::class, 'showRes'])->name('index.res');
+Route::get('/',  [PagesController::class, 'index'])->name('index');
+Route::get('/home', [PagesController::class, 'showRes'])->name('index.res');
 
 // Auth
 Route::get('registration', [GuestsController::class, 'showRegister'])->name('registration');
@@ -36,19 +33,24 @@ Route::post('login', [AuthController::class, 'login'])->name('logging');
 Route::get('logout', [UsersController::class, 'logout'])->name('logout');
 
 Route::get('vacancy', [PagesController::class, 'showVacancies'])->name('vacancy');
-Route::get('news', [PagesController::class, 'showArticles'])->name('news');
+Route::get('success', [TestsController::class, 'showSuccess'])->name('success');
+Route::get('news', [PagesController::class, 'showNews'])->name('news');
+Route::get('article/{id}', [PagesController::class, 'showArticle'])->name('article');
 Route::get('about', [PagesController::class, 'staticPages'])->name('about');
+Route::get('study', [PagesController::class, 'staticPages'])->name('study');
 Route::get('contacts', [PagesController::class, 'staticPages'])->name('contacts');
 Route::get('faq', [PagesController::class, 'staticPages'])->name('faq');
+Route::post('bid', [PagesController::class, 'bid'])->name('bid');
+Route::post('vacancy', [PagesController::class, 'bidVacancy'])->name('bid.vacancy');
 
-Route::group(['middleware' => 'verified'], function (){
+//Route::group(['middleware' => 'verified'], function (){
     Route::get('test/{id}', [TestsController::class, 'showTest'])->name('test');
     Route::post('test/{test}/result/{course_code}', [TestsController::class, 'result'])->name('test.res');
     Route::get('video/{id}', [CoursesController::class, 'showMaterial'])->name('video');
     Route::post('activate', [CoursesController::class, 'activate'])->name('course.activate');
+//});
 
-    Route::get('cabinet', [UsersController::class, 'showCabinet'])->name('cabinet');
-});
+Route::get('cabinet', [UsersController::class, 'showCabinet'])->name('cabinet');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

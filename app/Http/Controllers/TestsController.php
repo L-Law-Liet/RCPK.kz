@@ -52,6 +52,9 @@ class TestsController extends Controller
         });
         $courseCode->result = "$score из $total";
         $courseCode->save();
-        return redirect()->route('cabinet');
+        return redirect()->route('success');
+    }
+    public function showSuccess(){
+        return view('success');
     }
 }

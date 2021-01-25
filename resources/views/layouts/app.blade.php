@@ -6,9 +6,17 @@
 <html lang="ru">
 <!--<![endif]-->
 <head>
+    @php
+        use App\Models\Meta;
+        $meta = Meta::where('url', \Illuminate\Support\Facades\Route::currentRouteName())
+        ->firstOr(function (){
+            return Meta::first();
+        });
+    @endphp
     <meta charset="utf-8" />
-    <title>Default</title>
-    <meta name="description" content="" />
+    <title>{{$meta->title}}</title>
+    <meta name="description" content="{{$meta->description}}">
+    <meta name="keywords" content="{{$meta->keywords}}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('/storage/'.setting('site.logo'))}}">
@@ -26,10 +34,53 @@
     <link rel="stylesheet" href="{{asset('css/reset.css')}}" />
     <link rel="stylesheet" href="{{asset('css/main.css')}}" />
     <link rel="stylesheet" href="{{asset('css/media.css')}}" />
+    @stack('head')
+    <style>
+        #lds-ring {
+            display: none;
+            position: fixed;
+            z-index: 5000;
+            left: 50%;
+            top: 50%;
+            width: 80px;
+            height: 80px;
+            margin: -40px 0 0 -40px;
+        }
+        #lds-ring div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border: 8px solid #0037a8;
+            border-radius: 50%;
+            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #0037a8 transparent transparent transparent;
+        }
+        #lds-ring div:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+        #lds-ring div:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+        #lds-ring div:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+        @keyframes lds-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body @if(!in_array(\Illuminate\Support\Facades\Route::currentRouteName(), ['index', 'news'])) class="bg-blue"@endif>
 <div class="wrapper fx-column">
 
+    <div id="lds-ring"><div></div><div></div><div></div><div></div></div>
     <!-- Main -->
 
     <main class="main">
@@ -58,7 +109,7 @@
                             <p class="relations__tel"><a href="tel:{{setting('site.phone')}}">{{setting('site.phone')}}</a></p>
                             <p class="relations__bell"><a href="tel:{{setting('site.phone')}}">Заказать звонок</a></p>
                         </div>
-                        <div class="relations__btn"><button class="btn btn_blue">Пройти обучение</button></div>
+                        <div class="relations__btn"><button class="btn btn_blue open-modal-btn-bid">Пройти обучение</button></div>
                     </div>
                     @include('layouts.log-in')
                 </div>
@@ -75,7 +126,7 @@
 <!-- Overlay -->
 
 <div class="overlay"></div>
-
+@include('layouts.modals.bid')
 <!--[if lt IE 9]>
 <script src="{{asset('libs/html5shiv/es5-shim.min.js')}}"></script>
 <script src="{{asset('libs/html5shiv/html5shiv.min.js')}}"></script>

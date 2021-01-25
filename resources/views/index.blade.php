@@ -21,7 +21,10 @@
                                 <div class="title">
                                     <p class="title__h1">{{$header->title}}</p>
                                 </div>
-                                <p class="intro__btn"><a href="#" class="btn btn_blue">Пройти обучение</a></p>
+                                @isset($header->body)
+                                    <p>{{$header->body}}</p>
+                                @endisset
+                                <p class="intro__btn open-modal-btn-bid"><a class="btn btn_blue">Пройти обучение</a></p>
                             </div>
                         </div>
                     </div>
@@ -124,7 +127,7 @@
 
             <!-- Btn -->
 
-            <p class="associate__btn text-center"><a href="#" class="btn btn_blue">Пройти обучение</a></p>
+            <p class="associate__btn text-center open-modal-btn-bid"><a class="btn btn_blue">Пройти обучение</a></p>
 
         </div>
     </section>
@@ -142,10 +145,9 @@
 
             <!-- Form -->
 
-            <form @if(!session()->has('index_res')) action="{{route('index.res')}}" method="post" @endif class="form form__test">
-                @csrf
+            <form id="testForm" @if(!session()->has('index_res')) action="{{route('index.res')}}" method="get" @endif class="form form__test">
                 @include('layouts.questions')
-                <p class="test__btn text-center">
+                <p id="testRes" class="test__btn text-center">
                     @if(session()->has('index_res'))
                         <span style="color: #255dcf">{{session()->get('index_res')}}</span>
                     @else

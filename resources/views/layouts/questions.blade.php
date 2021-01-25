@@ -9,7 +9,7 @@
                 @foreach($v->options->shuffle() as $option)
                     <div class="col-12">
                         <label class="check">
-                            <input type="radio" required name="{{$v->id}}" value="{{$option->id}}"/>
+                            <input class="test_option" type="radio" required name="{{$v->id}}" value="{{$option->id}}"/>
                             <span class="check__mark"></span>
                             <span class="check__txt">{{$option->body}}</span>
                         </label>

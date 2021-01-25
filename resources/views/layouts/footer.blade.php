@@ -21,7 +21,7 @@
 
             <div class="col-md-4">
                 <ul class="footer__list">
-                    <li class="footer__item"><a href="{{route('index')}}" class="footer__link">Обучение</a></li>
+                    <li class="footer__item"><a href="{{route('study')}}" class="footer__link">Обучение</a></li>
                     <li class="footer__item"><a href="{{route('contacts')}}" class="footer__link">Контакты</a></li>
                     <li class="footer__item"><a target="_blank" href="{{setting('site.ref')}}" class="footer__link">Пройти опрос</a></li>
                 </ul>

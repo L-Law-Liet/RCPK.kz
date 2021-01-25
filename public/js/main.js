@@ -7,7 +7,7 @@ $(document).ready(function () {
   });
 
   $(document).click(function(event) {
-    if ($(event.target).closest('.navbar-toggle').length 
+    if ($(event.target).closest('.navbar-toggle').length
       || $(event.target).closest('.header__box').length ) return;
       $('.overlay').fadeOut();
       $('.header__box').removeClass('open');
@@ -24,11 +24,58 @@ $(document).ready(function () {
   });
 
   $(document).click(function(event) {
-    if ($(event.target).closest('.open-modal-btn').length 
+    if ($(event.target).closest('.open-modal-btn').length
       || $(event.target).closest('.modal__box').length ) return;
       $('.modal').fadeOut();
       event.stopPropagation();
   });
+
+// BID
+    $('.open-modal-btn-bid').on('click', function() {
+        $('.modal_code_bid').fadeIn();
+    });
+
+    $('.modal__close__bid').on('click', function() {
+        $('.modal_bid').fadeOut();
+    });
+
+    $(document).click(function(event) {
+        if ($(event.target).closest('.open-modal-btn-bid').length
+            || $(event.target).closest('.modal__box__bid').length ) return;
+        $('.modal_bid').fadeOut();
+        event.stopPropagation();
+    });
+
+    // Vacancy Modal
+    $('.open-modal-btn-vacancy').on('click', function() {
+        $('.modal_code_vacancy').fadeIn();
+    });
+
+    $('.modal__close__vacancy').on('click', function() {
+        $('.modal_vacancy').fadeOut();
+    });
+
+    $(document).click(function(event) {
+        if ($(event.target).closest('.open-modal-btn-vacancy').length
+            || $(event.target).closest('.modal__box__vacancy').length ) return;
+        $('.modal_vacancy').fadeOut();
+        event.stopPropagation();
+    });
+
+    // Code Modal
+    $('.open-modal-btn-code').on('click', function() {
+        $('.modal_code_code').fadeIn();
+    });
+
+    $('.modal__close__code').on('click', function() {
+        $('.modal_code').fadeOut();
+    });
+    $(document).click(function(event) {
+        if ($(event.target).closest('.open-modal-btn-code').length
+            || $(event.target).closest('.modal__box__code').length ) return;
+        $('.modal_code').fadeOut();
+        event.stopPropagation();
+    });
 
   // Intro sl
   $('.intro__sl').slick({
@@ -87,5 +134,59 @@ $(document).ready(function () {
       }
     ]
   });
-
 });
+document.getElementById('testForm').addEventListener('submit', ()=> {
+    event.preventDefault();
+    document.getElementById('lds-ring').style.display = 'inline-block';
+    let list = document.getElementsByClassName('test_option');
+    console.log(list);
+    let selected = [];
+    for (let i = 0; i < list.length; i++) {
+        if(list[i].checked){
+            selected.push(list[i].value);
+        }
+    }
+    fetch(`/home?arr=${JSON.stringify(selected)}`)
+        .then(res => {
+            return res.json();
+        })
+        .then(data => {
+            document.getElementById('lds-ring').style.display = 'none';
+            document.getElementById('testRes').innerHTML =
+                `<span style="color: #255dcf">${data}</span>`;
+        });
+});
+
+document.getElementById('bidForm').addEventListener('submit', function (){
+    event.preventDefault();
+    document.getElementById('lds-ring').style.display = 'inline-block';
+    if (event.target[0].name === '_token'){
+        let token = event.target[0].value;
+        let name = document.getElementById('bidName').value;
+        let phone = document.getElementById('bidPhone').value;
+        // document.getElementById('bidClose').click();
+        let data = {name: name, phone: phone, _token: token};
+        fetch('/bid', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(res => {
+                document.getElementById('lds-ring').style.display = 'none';
+                if (res.status === 200){
+                    document.getElementById('bidName').value = '';
+                    document.getElementById('bidPhone').value = '';
+                    document.getElementById('bidMess').innerHTML = 'Ваша заявка успешно отправлена!';
+                }
+                else {
+                    document.getElementById('bidMess').innerHTML = 'Что-то пошло не так';
+                }
+            });
+    }
+});
+function vacancyModal(id){
+    document.getElementById('vacancyId').value = id;
+}
+
