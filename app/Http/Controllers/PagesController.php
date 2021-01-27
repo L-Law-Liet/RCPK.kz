@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Bid;
 use App\Models\CommunityBlock;
-use App\Models\Course;
 use App\Models\HeaderSlide;
 use App\Models\Option;
 use App\Models\OrganizationBlock;
@@ -14,9 +13,8 @@ use App\Models\Test;
 use App\Models\Vacancy;
 use App\Models\VacancyBid;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Route;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 
 class PagesController extends Controller
 {

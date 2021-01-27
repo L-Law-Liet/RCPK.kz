@@ -47,6 +47,7 @@ Route::post('vacancy', [PagesController::class, 'bidVacancy'])->name('bid.vacanc
     Route::get('test/{id}', [TestsController::class, 'showTest'])->name('test');
     Route::post('test/{test}/result/{course_code}', [TestsController::class, 'result'])->name('test.res');
     Route::get('video/{id}', [CoursesController::class, 'showMaterial'])->name('video');
+    Route::get('/video-get', [CoursesController::class, 'getVideo'])->name('video.load');
     Route::post('activate', [CoursesController::class, 'activate'])->name('course.activate');
 //});
 
