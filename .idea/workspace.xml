@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f6f7563-e07e-4048-893d-b0b5213d97e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/RCAS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RCAS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoursesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rcas (3).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/VideoStream.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/video.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/video.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -246,7 +239,7 @@
       <workItem from="1611505438877" duration="60000" />
       <workItem from="1611542115466" duration="15869000" />
       <workItem from="1611634592002" duration="14042000" />
-      <workItem from="1611722250183" duration="15504000" />
+      <workItem from="1611722250183" duration="15817000" />
     </task>
     <servers />
   </component>

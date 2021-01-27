@@ -29,32 +29,6 @@ class CoursesController extends Controller
         $breadcrumbs = ['Видео'];
         return view('video', compact('material', 'breadcrumbs'));
     }
-    public function getVideo() {
-
-        $s3 = new S3Client(
-            [
-                'version' => 'latest',
-                'region'  => env('AWS_DEFAULT_REGION')
-            ]
-        );
-        $s3->registerStreamWrapper();
-        return $result = $s3->getObject([
-            'Bucket'                     => env('AWS_BUCKET'),
-            'Key'                        => 'videos/anti-terror-kaz.mp4',
-            'ResponseContentType'        => 'video/mp4',
-            'ResponseContentLanguage'    => 'en-US',
-            'ResponseCacheControl'       => 'No-cache',
-            'ResponseExpires'            => gmdate(DATE_RFC2822, time() + 3600),
-        ]);
-//        $stream = new VideoStream('s3://{'.env('AWS_BUCKET').'}/{videos/anti-terror-kaz.mp4}');
-//        $stream->start();
-//        $video = Storage::disk('s3')->get('videos/anti-terror-kaz.mp4');
-//        $response = Response::make($video, 200);
-//        $response->header('Content-Type', 'video/mp4');
-
-//        return Storage::disk('s3')->readStream('videos/anti-terror-kaz.mp4');
-    }
-
     public function activate(Request $request){
         $course_code = CourseCode::where('code', $request->code)->where('user_id', auth()->id())->where('is_activated', false)->first();
         session()->forget(['course_id', 'course_code']);
