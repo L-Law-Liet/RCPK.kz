@@ -16,7 +16,7 @@
             <div class="box">
                 <div class="video__box">
                     <video style="width: 100%" controls>
-                        <source src="{{$material->video}}" type="video/mp4">
+                        <source src="{{$material->video}} " type="video/mp4">
                         Your browser does not support HTML5 video.
                     </video>
 {{--                    <iframe src="https://rcpk-materials.s3-ap-southeast-1.amazonaws.com/videos/anti-terror-kaz.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}

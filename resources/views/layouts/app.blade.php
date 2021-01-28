@@ -136,6 +136,7 @@
 <script src="{{asset('libs/jquery/jquery-3.4.0.min.js')}}"></script>
 <script src="{{asset('libs/maskedinput/jquery.maskedinput.min.js')}}"></script>
 <script src="{{asset('libs/slick/slick.min.js')}}"></script>
+<script src="{{asset('js/jquery.mask.min.js')}}"></script>
 <script src="{{asset('js/main.js')}}"></script>
 <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 <!-- Google Analytics counter --><!-- /Google Analytics counter -->

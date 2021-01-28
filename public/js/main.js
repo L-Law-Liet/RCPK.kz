@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $('.phone_mask').mask('+7 000 000 00 00');
 
   // Show menu
   $('.navbar-toggle').click(function() {

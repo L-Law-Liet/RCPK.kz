@@ -13,7 +13,7 @@
                     @csrf
                     <input id="vacancyId" hidden name="vacancy_id" value="">
                     <label class="form__field"><input id="vacancyName" required type="text" name="name" placeholder="Имя" /></label>
-                    <label class="form__field"><input id="vacancyPhone" required type="text" name="phone" placeholder="Телефон" /></label>
+                    <label class="form__field"><input class="phone_mask" id="vacancyPhone" required type="text" name="phone" placeholder="Телефон" /></label>
                     <label class="form__field">
                         <textarea name="text" rows="8" placeholder="Сообщение" class="p-2"
                                   style="resize: none; width: 100%;"></textarea>

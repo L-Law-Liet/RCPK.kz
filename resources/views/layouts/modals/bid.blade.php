@@ -12,7 +12,7 @@
                 <form id="bidForm" action="{{route('bid')}}" method="post" class="form">
                     @csrf
                     <label class="form__field"><input id="bidName" required type="text" name="name" placeholder="Имя" /></label>
-                    <label class="form__field"><input id="bidPhone" required type="text" name="phone" placeholder="Телефон" /></label>
+                    <label class="form__field"><input class="phone_mask" id="bidPhone" required type="text" name="phone" placeholder="Телефон" /></label>
                     <button type="submit" class="btn btn_blue modal__btn">Отправить</button>
                 </form>
                 <div>
