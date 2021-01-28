@@ -898,7 +898,7 @@ input[type="checkbox"]:checked + span:before {
   margin-bottom: 15px;
 }
 
-.form__field input {
+.form__field input, .form__field textarea {
   width: 100%;
   color: #959595;
   font-size: 14px;

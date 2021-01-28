@@ -39,7 +39,7 @@ class TestsController extends Controller
         $total = sizeof($data);
         $score = Option::whereIn('id', array_values($data))->where('isTrue', true)->count();
         $res['test'] = $test->title;
-        $res['course'] = $test->course->title;
+        $res['course'] = $test->course;
         $user = Auth::user();
         if (!$user){
             return back();
