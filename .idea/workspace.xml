@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f6f7563-e07e-4048-893d-b0b5213d97e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/388f0d89-db7f-4e15-98ab-3f571a6b8757.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/388f0d89-db7f-4e15-98ab-3f571a6b8757.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TestsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/modals/vacancy.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/modals/vacancy.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mails/result.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mails/result.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/static.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/static.blade.php" afterDir="false" />
     </list>
     <list id="744c86b4-e9f5-442e-9efd-fb9f3d61ba96" name="sql with option idx" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +166,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -242,7 +238,10 @@
       <workItem from="1611542115466" duration="15869000" />
       <workItem from="1611634592002" duration="14042000" />
       <workItem from="1611722250183" duration="16305000" />
-      <workItem from="1611808609610" duration="4497000" />
+      <workItem from="1611808609610" duration="5570000" />
+      <workItem from="1611927706369" duration="636000" />
+      <workItem from="1611932612291" duration="67000" />
+      <workItem from="1612152437588" duration="189000" />
     </task>
     <servers />
   </component>
