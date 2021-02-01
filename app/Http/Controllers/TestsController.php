@@ -52,6 +52,15 @@ class TestsController extends Controller
         });
         $courseCode->result = "$score из $total";
         $courseCode->save();
+        $res['user'] = $courseCode->user;
+        $res['course'] = $courseCode->course;
+        $res['courseCode'] = $courseCode;
+        $to_name = env('APP_NAME');
+        $to_email = env('MAIL_FROM_ADDRESS');
+        Mail::send('mails.result-admin', $res, function($message) use ($to_name, $to_email) {
+            $message->to($to_email, $to_name)->subject('Был пройден тест с '.env('APP_NAME'));
+            $message->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
+        });
         return redirect()->route('success');
     }
     public function showSuccess(){

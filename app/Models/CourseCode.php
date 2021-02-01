@@ -21,4 +21,11 @@ class CourseCode extends Model
     {
         $row->setAttribute('code', rand(100000, 999999));
     }
+
+    public function course(){
+        return $this->belongsTo(Course::class);
+    }
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
