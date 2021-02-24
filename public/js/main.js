@@ -101,7 +101,7 @@ $(document).ready(function () {
   $('.associate__sl').slick({
     arrows: true,
     autoplay: true,
-    slidesToShow: 8,
+    slidesToShow: 1,
     autoplaySpeed: 5000,
     dots: false,
     prevArrow: '<button class="slick-prev"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 443.52 443.52"><path d="M143.492,221.863L336.226,29.129c6.663-6.664,6.663-17.468,0-24.132c-6.665-6.662-17.468-6.662-24.132,0l-204.8,204.8c-6.662,6.664-6.662,17.468,0,24.132l204.8,204.8c6.78,6.548,17.584,6.36,24.132-0.42c6.387-6.614,6.387-17.099,0-23.712L143.492,221.863z"/></svg></button>',
@@ -110,22 +110,22 @@ $(document).ready(function () {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 6
+          slidesToShow: 1
         }
       },{
         breakpoint: 992,
         settings: {
-          slidesToShow: 4
+          slidesToShow: 1
         }
       },{
         breakpoint: 768,
         settings: {
-          slidesToShow: 3
+          slidesToShow: 1
         }
       },{
         breakpoint: 576,
         settings: {
-          slidesToShow: 2
+          slidesToShow: 1
         }
       },{
         breakpoint: 360,

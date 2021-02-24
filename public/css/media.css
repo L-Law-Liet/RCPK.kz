@@ -191,6 +191,21 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+    .divided.col-md-6.col-12 {
+        margin: auto 0 !important;
+        padding-right: 0;
+    }
+    .row.divided.col-md-7.col-12 {
+        padding-right: 0;
+    }
+    .certificate {
+        width: 100%;
+        margin-right: 0;
+    }
+    .orgs {
+        width: 100%;
+        margin-left: 0;
+    }
   .intro__arrow {
     display: none;
   }

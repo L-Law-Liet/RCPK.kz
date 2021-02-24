@@ -18,21 +18,22 @@
                 @foreach($news as $new)
                     <li class="vacancy__item">
                         <div class="d-flex justify-content-center">
-                            <div class="news-img">
-                                <img src="{{'/storage/'.$new->image}}" height="200px" alt="{{$new->title}}">
-                            </div>
+                                <div class="news-img">
+                                    @isset($new->image)
+                                        <img src="{{asset('/storage/'.$new->image)}}" height="200px" alt="{{$new->title??''}}">
+                                    @endisset
+                                </div>
                             <div class="news-content">
                                 <div class="vacancy__head">
-                                    <h3>{{$new->title}}</h3>
+                                    <h3>{{$new->title??''}}</h3>
                                 </div>
-                                <p class="vacancy__info">{!! substr($new->paragraph1, 0, 500) !!}</p>
-                                <p class="vacancy__respond"><a href="{{route('article', $new->id)}}">Посмотреть</a></p>
+                                <p class="vacancy__info">{!! Str::words($new->paragraph1??'', 50, '...') !!}</p>
+                                <p class="vacancy__respond"><a href="{{route('article', $new->paragraph2)}}">Посмотреть</a></p>
                             </div>
                         </div>
                     </li>
                 @endforeach
             </ul>
-
         </div>
     </section>
 @endsection

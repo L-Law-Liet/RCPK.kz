@@ -3,11 +3,13 @@
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\GuestsController;
 use App\Http\Controllers\CoursesController;
+use App\Http\Controllers\DocumentsController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\TestsController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -79,6 +81,17 @@ Route::get('site', function (){
 })->name('site');
 Route::get('mail-view', function (){
     return view('mails.verify');
+});
+
+Route::get('/news/update', function (){
+   Artisan::call('news:update');
+});
+Route::prefix('/docs')->group(function (){
+    Route::get('biot', [DocumentsController::class, 'biot'])->name('biot');
+    Route::get('antiterror', [DocumentsController::class, 'antiterror'])->name('antiterror');
+    Route::get('paramedika', [DocumentsController::class, 'paramedika'])->name('paramedika');
+    Route::get('ptm', [DocumentsController::class, 'ptm'])->name('ptm');
+    Route::get('sez', [DocumentsController::class, 'sez'])->name('sez');
 });
 
 

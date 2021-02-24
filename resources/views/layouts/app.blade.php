@@ -75,47 +75,43 @@
                 transform: rotate(360deg);
             }
         }
+        .govBtn, .langBtn {
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .gov-content, .lang-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .gov-content a, .lang-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .show {display: block;}
     </style>
 </head>
 <body @if(!in_array(\Illuminate\Support\Facades\Route::currentRouteName(), ['index', 'news'])) class="bg-blue"@endif>
 <div class="wrapper fx-column">
-
     <div id="lds-ring"><div></div><div></div><div></div><div></div></div>
     <!-- Main -->
 
     <main class="main">
-        <!-- Header -->
-
-        <header class="header">
-            <div class="container d-flex align-items-center justify-content-between">
-
-                <!-- Logo -->
-
-                <div class="logo d-flex align-items-center">
-                    <a href="{{route('index')}}" class="logo__link"><img src="{{'/storage/'.setting('site.logo')}}" alt="Логотип"></a>
-                    <p class="logo__txt">{{setting('site.title')}}</p>
-                </div>
-
-                <!-- Navbar toggle -->
-                @include('layouts.mobile.toggle')
-
-                <!-- Box -->
-
-                <div class="header__box d-lg-flex align-items-center">
-                    @include('layouts.mobile.logo')
-                    @include('layouts.nav')
-                    <div class="relations d-lg-flex align-items-center">
-                        <div class="relations__links text-right">
-                            <p class="relations__tel"><a href="tel:{{setting('site.phone')}}">{{setting('site.phone')}}</a></p>
-                            <p class="relations__bell"><a href="tel:{{setting('site.phone')}}">Заказать звонок</a></p>
-                        </div>
-                        <div class="relations__btn"><button class="btn btn_blue open-modal-btn-bid">Пройти обучение</button></div>
-                    </div>
-                    @include('layouts.log-in')
-                </div>
-
-            </div>
-        </header>
+        @include('layouts.header')
         @include('layouts.breadcrumbs')
         @yield('content')
     </main>
@@ -138,6 +134,39 @@
 <script src="{{asset('libs/slick/slick.min.js')}}"></script>
 <script src="{{asset('js/jquery.mask.min.js')}}"></script>
 <script src="{{asset('js/main.js')}}"></script>
+<script>
+    function govDropdown() {
+        document.getElementById("govAgency").classList.toggle("show");
+    }
+    window.onclick = function(event) {
+        if (!event.target.matches('.govBtn')) {
+            var dropdowns = document.getElementsByClassName("gov-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+    function langDropdown() {
+        document.getElementById("langAgency").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.langBtn')) {
+            var dropdowns = document.getElementsByClassName("lang-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
 <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 <!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </body>

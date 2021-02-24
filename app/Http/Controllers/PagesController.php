@@ -13,22 +13,18 @@ use App\Models\Test;
 use App\Models\Vacancy;
 use App\Models\VacancyBid;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class PagesController extends Controller
 {
     public function index(){
-        $headers = HeaderSlide::all();
-        $data['headers'] = $headers;
-        $community_blocks = CommunityBlock::all();
-        $data['community_blocks'] = $community_blocks;
         $organization_blocks = OrganizationBlock::all();
         $data['organization_blocks'] = $organization_blocks;
-        $data['test'] = Test::where('course_id', null)->where('title', 'Index')->firstOrFail();
-        $data['questions'] = $data['test']->questions->shuffle();
         $data['imgs'] = OrgSlider::all();
-//        dd($data);
+        $data['news'] = Article::where('image', '<>', null)->orderBy('created_at', 'desc')->take(5)->get();
         return view('index', $data);
     }
     public function showRes(Request $request){
@@ -40,12 +36,12 @@ class PagesController extends Controller
         return response()->json($index_res);
     }
     public function showNews(){
-        $data['news'] = Article::paginate(5);
+        $data['news'] = Article::orderBy('created_at', 'desc')->get();
         $data['breadcrumbs'] = ['Новости'];
         return view('news', $data);
     }
-    public function showArticle($id){
-        $data['article'] = Article::firstOrFail();
+    public function showArticle($slug){
+        $data['article'] = Article::where('paragraph2', $slug)->firstOrFail();
         $data['breadcrumbs'] = ['Статья'];
         return view('article', $data);
     }
