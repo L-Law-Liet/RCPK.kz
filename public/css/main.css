@@ -451,7 +451,9 @@ i.i-meloman {
   margin-top: 40px;
   padding: 60px 0 30px;
 }
-
+.article-img {
+    width: 40%;
+}
 .society .row {
   margin-top: 35px;
 }
@@ -474,7 +476,7 @@ i.i-meloman {
 }
 .society__item {
     padding: 30px;
-    background: #f0f5ff;
+    background: #f5f5f5;
     border-radius: 5px;
 }
 
@@ -989,7 +991,7 @@ input[type="checkbox"]:checked + span:before {
 
 /* ------------- *Modal -------------- */
 
-.modal, .modal_bid, .modal_vacancy, .modal_code, .modal_code_1 {
+.modal, .modal_bid, .modal_gov, .modal_vacancy, .modal_code, .modal_code_1 {
   z-index: 191;
   display: none;
   position: fixed;
@@ -1011,10 +1013,10 @@ input[type="checkbox"]:checked + span:before {
   max-width: 440px;width: 96%;
 }
 .news-img {
-    width: 30% !important;
+    width: 22% !important;
 }
 .news-content {
-    width: 70% !important;
+    width: 78% !important;
 }
 .modal__close, .modal__close__bid, .modal__close__vacancy, .modal__close__code {
   position: absolute;
@@ -1025,7 +1027,7 @@ input[type="checkbox"]:checked + span:before {
   opacity: .5;
 }
 
-.modal h2, .modal_bid h2, .modal_vacancy h2, .modal_code h2, .modal_code_1 h2 {
+.modal h2, .modal_bid h2, .modal_gov h2, .modal_vacancy h2, .modal_code h2, .modal_code_1 h2 {
   color: #505050;
 }
 

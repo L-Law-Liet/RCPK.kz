@@ -17,10 +17,10 @@
             <ul class="vacancy__list">
                 @foreach($news as $new)
                     <li class="vacancy__item">
-                        <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-center flex-md-row flex-column">
                                 <div class="news-img">
                                     @isset($new->image)
-                                        <img src="{{asset('/storage/'.$new->image)}}" height="200px" alt="{{$new->title??''}}">
+                                        <img src="{{asset('/storage/'.$new->image)}}" width="200px" height="200px" alt="{{$new->title??''}}">
                                     @endisset
                                 </div>
                             <div class="news-content">

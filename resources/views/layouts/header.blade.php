@@ -5,15 +5,14 @@
         <div class="mx-md-5 px-md-5 mx-3">
             <div class="d-flex justify-content-between flex-column flex-md-row">
                 <div class="d-flex flex-md-row flex-column">
-                    <div class="dropdown">
-                        <button onclick="govDropdown()" class="govBtn mt-2">Государственные органы
-                            <img style="vertical-align: middle;" src="{{asset('img/svg/chevron-down.svg')}}" alt="i">
-                        </button>
-                        <div id="govAgency" class="gov-content">
-                            <a>Smth</a>
+                    <div>
+                        <div class="dropdown">
+                            <button class="govBtn mt-2">Государственные органы
+                                <img style="vertical-align: middle;" src="{{asset('img/svg/chevron-down.svg')}}" alt="i">
+                            </button>
                         </div>
+                        <img class="ml-md-5 ml-2 mt-2" style="vertical-align: middle; width: 64px; height: 28px" src="{{asset('img/svg/egov.svg')}}" alt="egov">
                     </div>
-                    <img class="ml-md-5 mt-2" style="vertical-align: middle; width: 64px; height: 28px" src="{{asset('img/svg/egov.svg')}}" alt="egov">
                     <div class="ml-md-5 pl-md-2 d-inline-block" style="vertical-align: middle">
                         <div class="d-flex justify-content-start mt-md-0 mt-2">
                             <img style="vertical-align: middle;" src="{{asset('img/svg/eltanba.svg')}}" alt="eltanba">
@@ -21,19 +20,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-end flex-md-row flex-column">
-                    <img class="mt-md-auto mt-2 mr-n2" style="width: 30.7px; height: 36px" src="{{asset('img/svg/whatsapp.svg')}}" alt="wp">
+                <div class="d-flex justify-content-md-end justify-content-between flex-md-row">
+                    <img class="mt-md-auto mt-2" style="width: 30.7px; height: 36px" src="{{asset('img/svg/whatsapp.svg')}}" alt="wp">
                     <img class="ml-md-5 mt-md-auto mt-2" style="width: 30.7px; height: 36px" src="{{asset('img/svg/instagram.svg')}}" alt="insta">
                     @guest
-                        <a class="mt-2 ml-md-5" style="color: white;" href="{{route('login')}}">Войти</a>
-                        <a class="mt-2 ml-md-4 pl-md-2" style="color: white;" href="{{route('registration')}}">Регистрация</a>
+                        <a class="mt-2 ml-md-5 mob-lh-36px" style="color: white;" href="{{route('login')}}">Войти</a>
+                        <a class="mt-2 ml-md-4 mob-lh-36px pl-md-2" style="color: white;" href="{{route('registration')}}">Регистрация</a>
                     @endguest
                     @auth
-                        <a class="mt-2 ml-md-5" style="color: white;" href="{{route('cabinet')}}">Кабинет</a>
-                        <a class="mt-2 ml-md-4 pl-md-2" style="color: white;" href="{{route('logout')}}">Выйти</a>
+                        <a class="mt-2 ml-md-5 mob-lh-36px" style="color: white;" href="{{route('cabinet')}}">Кабинет</a>
+                        <a class="mt-2 ml-md-4 pl-md-2 mob-lh-36px" style="color: white;" href="{{route('logout')}}">Выйти</a>
                     @endauth
                     <div class="dropdown">
-                        <button onclick="langDropdown()" class="d-flex mt-2 ml-md-4 pl-md-3 langBtn">
+                        <button onclick="langDropdown()" class="d-flex mt-md-2 ml-md-4 pl-md-3 langBtn">
                             <span style="">
                                 RU
                             </span>

@@ -8,14 +8,18 @@
 
         <!-- Box -->
 
+        <div class="title">
+            <h1 class="title__page">{{$article->title}}</h1>
+        </div>
         <div class="box clearfix">
-            @if($article->image)
-                <img src="{{'/storage'.$article->image}}" alt="{{$article->title}}">
+            <div>
+                @if($article->image)
+                    <img class="article-img" src="{{'/storage'.$article->image}}" alt="{{$article->title}}">
                 @endif
-            <div class="title">
-                <h1 class="title__page">{{$article->title}}</h1>
+                <span>
+                    {!! $article->paragraph1!!}
+                </span>
             </div>
-            <div>{!! $article->paragraph1!!}</div>
         </div>
 
     </div>

@@ -1,6 +1,19 @@
 $(document).ready(function () {
     $('.phone_mask').mask('+7 000 000 00 00');
 
+    $('.search-btn').on('click', function (){
+        $('.nav-list').hide();
+        $('.search-div').show();
+        $('.search-btn').hide();
+        $('.close-search-btn').show();
+    });
+    $('.close-search-btn').on('click', function (){
+        $('.search-div').hide();
+        $('.nav-list').show();
+        $('.close-search-btn').hide();
+        $('.search-btn').show();
+    });
+
   // Show menu
   $('.navbar-toggle').click(function() {
     $('.overlay').fadeToggle();
@@ -75,6 +88,23 @@ $(document).ready(function () {
         if ($(event.target).closest('.open-modal-btn-code').length
             || $(event.target).closest('.modal__box__code').length ) return;
         $('.modal_code_1').fadeOut();
+        event.stopPropagation();
+    });
+
+
+    // App Modal
+    $('.govBtn').on('click', function() {
+        $('.modal_code_gov').fadeIn();
+    });
+
+    $('.modal__close__gov').on('click', function() {
+        $('.modal_gov').fadeOut();
+    });
+
+    $(document).click(function(event) {
+        if ($(event.target).closest('.govBtn').length
+            || $(event.target).closest('.modal__box__gov').length ) return;
+        $('.modal_gov').fadeOut();
         event.stopPropagation();
     });
 
@@ -190,4 +220,3 @@ document.getElementById('bidForm').addEventListener('submit', function (){
 function vacancyModal(id){
     document.getElementById('vacancyId').value = id;
 }
-

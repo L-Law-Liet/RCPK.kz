@@ -191,6 +191,24 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+    .langBtn {
+        margin-top: 18px;
+    }
+    .mob-lh-36px {
+        line-height: 36px !important;
+    }
+    .news-img {
+        width: 100% !important;
+    }
+    .news-img img{
+        width: 100%;
+    }
+    .news-content {
+        width: 100% !important;
+    }
+    .article-img {
+        width: 100%;
+    }
     .divided.col-md-6.col-12 {
         margin: auto 0 !important;
         padding-right: 0;
@@ -242,7 +260,7 @@
   .video__box iframe {
     height: 290px;
   }
-  .modal h2, .modal_bid h2, .modal_vacancy h2, .modal_code h2,.modal_code_1 h2  {
+  .modal h2, .modal_bid h2, .modal_gov h2, .modal_vacancy h2, .modal_code h2,.modal_code_1 h2  {
     font-size: 26px;
   }
 }

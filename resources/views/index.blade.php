@@ -24,7 +24,7 @@
                                                         <a style="color: black" href="{{route('article', $news[0]->paragraph2)}}">{{$news[0]->title}}</a>
                                                     </div>
                                                     <p class="news-date">
-                                                        {{date('d.m.Y', $news[0]->date)}}
+                                                        {{date('d.m.Y', strtotime($news[0]->created_at))}}
                                                     </p>
                                                 </div>
                                             </div>
@@ -38,7 +38,7 @@
                                                         <a style="color: black" href="{{route('article', $news[1]->paragraph2)}}">{{$news[1]->title}}</a>
                                                     </div>
                                                         <p class="news-date">
-                                                            {{date('d.m.Y', $news[1]->date)}}
+                                                            {{date('d.m.Y', strtotime($news[1]->created_at))}}
                                                         </p>
                                                     </div>
                                                 </div>
@@ -50,7 +50,7 @@
                                             @for($i = 2; $i < count($news); $i++)
                                                 <div class="py-1">
                                                     <p class="news-date">
-                                                        {{date('d.m.Y', $news[$i]->date)}}
+                                                        {{date('d.m.Y', strtotime($news[$i]->created_at))}}
                                                     </p>
                                                     <div class="news-title">
                                                         <a style="color: black" href="{{route('article', $news[$i]->paragraph2)}}">

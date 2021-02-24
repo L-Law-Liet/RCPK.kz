@@ -123,6 +123,7 @@
 
 <div class="overlay"></div>
 @include('layouts.modals.bid')
+@include('layouts.modals.gov')
 <!--[if lt IE 9]>
 <script src="{{asset('libs/html5shiv/es5-shim.min.js')}}"></script>
 <script src="{{asset('libs/html5shiv/html5shiv.min.js')}}"></script>
