@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller
@@ -20,7 +21,16 @@ class UsersController extends Controller
     public function showCabinet(){
 //        dd(session()->all());
         $data['courses'] = Course::all();
-        $data['breadcrumbs'] = ['Личный кабинет'];
+        $bread = 'Личный кабинет';
+        switch (App::getLocale()){
+            case 'en':
+                $bread = 'Cabinet';
+                break;
+            case 'kz':
+                $bread = 'Жеке бөлме';
+                break;
+        }
+        $data['breadcrumbs'] = [$bread];
         return view('cabinet', $data);
     }
 }

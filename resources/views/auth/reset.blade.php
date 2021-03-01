@@ -17,12 +17,12 @@
                 </ul>
             @endif
             <div class="wrap">
-                <h3>Восстановление пароля</h3>
+                <h3>@lang('loc.passwd_rec')</h3>
                 <form action="{{route('reset.send')}}" class="form" method="post">
                     @csrf
                     <label class="form__field">
-                        <input required type="email" placeholder="Эл. почта" name="email"/></label>
-                    <button class="btn btn_blue form__btn">Отправить</button>
+                        <input required type="email" placeholder="@lang('loc.email')" name="email"/></label>
+                    <button class="btn btn_blue form__btn">@lang('loc.send')</button>
                 </form>
             </div>
 

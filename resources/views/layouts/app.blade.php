@@ -105,7 +105,7 @@
         .show {display: block;}
     </style>
 </head>
-<body @if(!in_array(\Illuminate\Support\Facades\Route::currentRouteName(), ['index', 'news'])) class="bg-blue"@endif>
+<body>
 <div class="wrapper fx-column">
     <div id="lds-ring"><div></div><div></div><div></div><div></div></div>
     <!-- Main -->
@@ -114,6 +114,7 @@
         @include('layouts.header')
         @include('layouts.breadcrumbs')
         @yield('content')
+
     </main>
 
     @include('layouts.footer')

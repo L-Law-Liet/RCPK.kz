@@ -16,15 +16,15 @@
                 @endif
 
             <div class="wrap">
-                <h3>Вход</h3>
+                <h3>@lang('loc.entry')</h3>
                 <form action="{{route('logging')}}" class="form" method="post">
                     @csrf
                     <label class="form__field">
-                        <input type="text" placeholder="Эл. почта" name="email" value="{{old('email')}}"/></label>
+                        <input type="text" placeholder="@lang('loc.email')" name="email" value="{{old('email')}}"/></label>
                     <label class="form__field">
-                        <input type="password" placeholder="Пароль" name="password" /></label>
-                    <button class="btn btn_blue form__btn">Вход</button>
-                    <p class="form__link text-center"><a href="{{route('reset.show')}}">Забыли пароль?</a></p>
+                        <input type="password" placeholder="@lang('loc.passwd')" name="password" /></label>
+                    <button class="btn btn_blue form__btn">@lang('loc.entry')</button>
+                    <p class="form__link text-center"><a href="{{route('reset.show')}}">@lang('loc.pass_forgot')</a></p>
                 </form>
             </div>
 

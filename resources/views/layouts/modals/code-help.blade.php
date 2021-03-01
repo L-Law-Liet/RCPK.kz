@@ -6,10 +6,10 @@
         <div class="modal__box__code">
             <div class="modal__head text-center">
                 <button id="codeClose" class="modal__close__code">X</button>
-                <h2>Как получить код</h2>
+                <h2>@lang('loc.how_get_code')</h2>
             </div>
             <div class="modal__body">
-                <p>Вам нужно связаться с менеджером по номеру: <br> <a href="tel:+77273645400">+7 (727) 364-54-00</a></p>
+                <p>@lang('loc.need_to_link_manager_no'): <br> <a href="tel:+77273645400">+7 (727) 364-54-00</a></p>
             </div>
         </div>
     </div>

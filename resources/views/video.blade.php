@@ -21,7 +21,7 @@
                     </video>
 {{--                    <iframe src="https://rcpk-materials.s3-ap-southeast-1.amazonaws.com/videos/anti-terror-kaz.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}
                 </div>
-                <p class="video__btn text-center"><a href="{{route('test', $material->course_id)}}" class="btn btn_blue">Сдать экзамен</a></p>
+                <p class="video__btn text-center"><a href="{{route('test', $material->course_id)}}" class="btn btn_blue">@lang('loc.pass_exam')</a></p>
             </div>
 
         </div>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -19,11 +20,29 @@ class GuestsController extends Controller
     }
 
     public function showLogin(){
-        $breadcrumbs = ['Вход'];
+        $bread = 'Вход';
+        switch (App::getLocale()){
+            case 'en':
+                $bread = 'Login';
+                break;
+            case 'kz':
+                $bread = 'Кіру';
+                break;
+        }
+        $breadcrumbs = [$bread];
         return view('auth.login', compact('breadcrumbs'));
     }
     public function showRegister(){
-        $breadcrumbs = ['Регистрация'];
+        $bread = 'Регистрация';
+        switch (App::getLocale()){
+            case 'en':
+                $bread = 'Registration';
+                break;
+            case 'kz':
+                $bread = 'Тіркеу';
+                break;
+        }
+        $breadcrumbs = [$bread];
         return view('auth.reg', compact('breadcrumbs'));
     }
     public function showReset(){

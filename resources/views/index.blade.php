@@ -8,10 +8,10 @@
             <!-- News -->
                 <div class="pt-5">
                     <div class="mx-md-5 px-md-5 mx-3">
-                        <h2 style="color: #1565C0;">Новости</h2>
+                        <h2 style="color: #1565C0;">@lang('loc.news')</h2>
                         <div>
                             <div class="mb-3 d-flex justify-content-end">
-                                <a href="{{route('news')}}">Все новости</a>
+                                <a href="{{route('news')}}">@lang('loc.all_news')</a>
                             </div>
                             <div class="clearfix">
                                 <div class="row pr-md-0 mx-md-0 py-md-0">
@@ -21,7 +21,7 @@
                                                 <img src="{{asset('/storage/'.$news[0]->image)}}" alt="{{$news[0]->title}}">
                                                 <div>
                                                     <div class="news-title">
-                                                        <a style="color: black" href="{{route('article', $news[0]->paragraph2)}}">{{$news[0]->title}}</a>
+                                                        <a style="color: black" href="{{route('article', $news[0]->paragraph2)}}">{{(app()->getLocale() == 'ru')?$news[0]->title:$news[0]->{'title_'.app()->getLocale()} }}</a>
                                                     </div>
                                                     <p class="news-date">
                                                         {{date('d.m.Y', strtotime($news[0]->created_at))}}
@@ -35,7 +35,9 @@
                                                     <img src="{{asset('/storage/'.$news[1]->image)}}" alt="{{$news[1]->title}}">
                                                     <div>
                                                     <div class="news-title">
-                                                        <a style="color: black" href="{{route('article', $news[1]->paragraph2)}}">{{$news[1]->title}}</a>
+                                                        <a style="color: black" href="{{route('article', $news[1]->paragraph2)}}">
+                                                            {{(app()->getLocale() == 'ru')?$news[1]->title:$news[1]->{'title_'.app()->getLocale()} }}
+                                                        </a>
                                                     </div>
                                                         <p class="news-date">
                                                             {{date('d.m.Y', strtotime($news[1]->created_at))}}
@@ -54,7 +56,7 @@
                                                     </p>
                                                     <div class="news-title">
                                                         <a style="color: black" href="{{route('article', $news[$i]->paragraph2)}}">
-                                                            {{$news[$i]->title}}
+                                                            {{(app()->getLocale() == 'ru')?$news[$i]->title:$news[$i]->{'title_'.app()->getLocale()} }}
                                                         </a>
                                                     </div>
                                                 </div>
@@ -103,12 +105,12 @@
                                     <div class="society__item">
                                         <i class="society__icon"
                                            style="background: url({{$block->img_url}}) center no-repeat;"></i>
-                                        <h3 class="society__title">{{$block->title}}</h3>
+                                        <h3 class="society__title">{{(app()->getLocale() == 'ru')?$block->title:$block->{'title_'.app()->getLocale()} }}</h3>
                                         <div class="society__info">
                                             <span class="society__percent flex-center">{{$block->percent}}%</span>
                                             <ul class="society__list">
-                                                <li>{{$block->info1}}</li>
-                                                <li>{{$block->info2}}</li>
+                                                <li>{{(app()->getLocale() == 'ru')?$block->info1:$block->{'info1_'.app()->getLocale()} }}</li>
+                                                <li>{{(app()->getLocale() == 'ru')?$block->info2:$block->{'info2_'.app()->getLocale()} }}</li>
                                             </ul>
                                         </div>
                                     </div>

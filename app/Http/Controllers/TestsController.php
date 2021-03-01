@@ -8,6 +8,7 @@ use App\Models\Option;
 use App\Models\Test;
 use App\Services\CourseService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
@@ -26,15 +27,24 @@ class TestsController extends Controller
         }
         $data['test'] = Test::where('course_id', $id)->firstOrFail();
         $data['questions'] = $data['test']->questions->shuffle()->take(15);
-        $data['breadcrumbs'] = ['Тест'];
-        $course_code = CourseCode::where('code', session()->get('course_code'))->where('user_id', auth()->id())->where('course_id', $id)->where('is_activated', false)->firstOrFail();
-        $course_code->is_activated = true;
-        $course_code->save();
-        $data['course_code'] = $course_code;
+        $bread = 'Тест';
+        switch (App::getLocale()){
+            case 'en':
+                $bread = 'Test';
+                break;
+            case 'kz':
+                $bread = 'Тест';
+                break;
+        }
+        $data['breadcrumbs'] = [$bread];
+//        $course_code = CourseCode::where('code', session()->get('course_code'))->where('user_id', auth()->id())->where('course_id', $id)->where('is_activated', false)->firstOrFail();
+//        $course_code->is_activated = true;
+//        $course_code->save();
+//        $data['course_code'] = $course_code;
         session()->forget(['course_id', 'course_code']);
         return view('test', $data);
     }
-    public function result(Test $test, CourseCode $courseCode, Request $request){
+    public function result(Test $test, Request $request){
         $data = $request->except('_token');
         $total = sizeof($data);
         $score = Option::whereIn('id', array_values($data))->where('isTrue', true)->count();
@@ -50,11 +60,12 @@ class TestsController extends Controller
             $message->to($to_email, $to_name)->subject('Результаты теста с '.env('APP_NAME'));
             $message->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
         });
-        $courseCode->result = "$score из $total";
-        $courseCode->save();
-        $res['user'] = $courseCode->user;
-        $res['course'] = $courseCode->course;
-        $res['courseCode'] = $courseCode;
+        $result = "$score из $total";
+//        $courseCode->result = "$score из $total";
+//        $courseCode->save();
+        $res['user'] = $user;
+        $res['course'] = $test->course;
+        $res['result'] = $result;
         $to_name = env('APP_NAME');
         $to_email = env('MAIL_FROM_ADDRESS');
         Mail::send('mails.result-admin', $res, function($message) use ($to_name, $to_email) {

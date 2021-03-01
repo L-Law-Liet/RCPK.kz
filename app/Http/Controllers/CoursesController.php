@@ -30,11 +30,12 @@ class CoursesController extends Controller
         return view('video', compact('material', 'breadcrumbs'));
     }
     public function activate(Request $request){
-        $course_code = CourseCode::where('code', $request->code)->where('user_id', auth()->id())->where('is_activated', false)->first();
+//        $course_code = CourseCode::where('code', $request->code)->where('user_id', auth()->id())->where('is_activated', false)->first();
+        $course_code = Course::where('body', $request->code)->first();
         session()->forget(['course_id', 'course_code']);
         if ($course_code){
-            session(['course_id' => $course_code->course_id]);
-            session(['course_code' => $course_code->code]);
+            session(['course_id' => $course_code->id]);
+            session(['course_code' => $request->code]);
         }
         return redirect()->route('cabinet');
     }

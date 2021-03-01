@@ -40,7 +40,7 @@ class NewsUpdate extends Command
     public function handle()
     {
         $client = new \GuzzleHttp\Client();
-        $count = 3;
+        $count = 5;
         $news = [];
         $urls = [
             "https://www.gov.kz/api/v1/public/content-manager/news?sort-by=created_date:DESC&projects=eq:dsm&page=1&size=$count&lang=ru",
@@ -64,8 +64,14 @@ class NewsUpdate extends Command
             if(is_null(Article::where('paragraph2', $new->slug)->first())){
                 $article = new Article();
                 $article->title = $new->title;
-                if (isset($new->body))
-                    $article->paragraph1 = substr(explode('body>', $new->body )[1],  0 , -2 );
+                $article->title_kz = $new->title;
+                $article->title_en = $new->title;
+                if (isset($new->body)){
+                    $body = substr(explode('body>', $new->body )[1],  0 , -2 );
+                    $article->paragraph1 = $body;
+                    $article->paragraph1_kz = $body;
+                    $article->paragraph1_en = $body;
+                }
                 $article->paragraph2 = $new->slug;
 
                 if ($new->heropic??''){

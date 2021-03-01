@@ -9,15 +9,15 @@
             <!-- Title -->
 
             <div class="title">
-                <h2 class="title__page">Проверь свои знания</h2>
+                <h2 class="title__page">@lang('loc.test_knowledge')</h2>
             </div>
 
             <!-- Form -->
 
-            <form action="{{route('test.res', [$test, $course_code])}}" method="post" class="form form__test">
+            <form action="{{route('test.res', $test)}}" method="post" class="form form__test">
                 @csrf
                 @include('layouts.questions')
-                <p class="test__btn text-center"><button type="submit" class="btn btn_blue">Посмотреть результат</button></p>
+                <p class="test__btn text-center"><button type="submit" class="btn btn_blue">@lang('loc.see_res')</button></p>
             </form>
 
         </div>

@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Meta;
 use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\ServiceProvider;
 
@@ -25,5 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $langs = ['en', 'ru', 'kz'];
+        view()->share('langs', $langs);
     }
 }

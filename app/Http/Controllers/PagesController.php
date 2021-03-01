@@ -13,6 +13,7 @@ use App\Models\Test;
 use App\Models\Vacancy;
 use App\Models\VacancyBid;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Mail;
@@ -37,17 +38,44 @@ class PagesController extends Controller
     }
     public function showNews(){
         $data['news'] = Article::orderBy('created_at', 'desc')->get();
-        $data['breadcrumbs'] = ['Новости'];
+        $bread = 'Новости';
+        switch (App::getLocale()){
+            case 'en':
+                $bread = 'News';
+                break;
+            case 'kz':
+                $bread = 'Жаңалықтар';
+                break;
+        }
+        $data['breadcrumbs'] = [$bread];
         return view('news', $data);
     }
     public function showArticle($slug){
         $data['article'] = Article::where('paragraph2', $slug)->firstOrFail();
-        $data['breadcrumbs'] = ['Статья'];
+        $bread = 'Статья';
+        switch (App::getLocale()){
+            case 'en':
+                $bread = 'Article';
+                break;
+            case 'kz':
+                $bread = 'Мақала';
+                break;
+        }
+        $data['breadcrumbs'] = [$bread];
         return view('article', $data);
     }
     public function showVacancies(){
         $vacancies = Vacancy::all();
-        $breadcrumbs = ['Вакансии'];
+        $bread = 'Вакансии';
+        switch (App::getLocale()){
+            case 'en':
+                $bread = 'Vacancies';
+                break;
+            case 'kz':
+                $bread = 'Бос орындар';
+                break;
+        }
+        $breadcrumbs = [$bread];
         return view('vacancy', compact('vacancies', 'breadcrumbs'));
     }
     public function staticPages(){
@@ -91,5 +119,28 @@ class PagesController extends Controller
         $bid->text = $data['text'];
         $bid->save();
         return redirect()->route('index');
+    }
+
+    public function setLang($lang){
+        session(['lang' => $lang]);
+        return redirect()->back();
+    }
+    public function showSearch(Request $request){
+        $search = $request->search;
+        $bread = 'Поиск';
+        switch (App::getLocale()){
+            case 'en':
+                $bread = 'Search';
+                break;
+            case 'kz':
+                $bread = 'Іздеу';
+                break;
+        }
+        $data['breadcrumbs'] = [$bread];
+        $data['search'] = trim($search);
+        $articles = Article::where('title', 'like', "%$search%")->get()->toArray();
+        $vacancies = Vacancy::where('title', 'like', "%$search%")->get()->toArray();
+        $data['list'] = array_merge($articles, $vacancies);
+        return view('search', $data);
     }
 }

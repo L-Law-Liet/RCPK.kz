@@ -9,7 +9,7 @@
             <!-- Title -->
 
             <div class="title">
-                <h1 class="title__page">Новости</h1>
+                <h1 class="title__page">@lang('loc.news')</h1>
             </div>
 
             <!-- List -->
@@ -25,10 +25,10 @@
                                 </div>
                             <div class="news-content">
                                 <div class="vacancy__head">
-                                    <h3>{{$new->title??''}}</h3>
+                                    <h3>{{(app()->getLocale() == 'ru')?$new->title:$new->{'title_'.app()->getLocale()} ??''}}</h3>
                                 </div>
-                                <p class="vacancy__info">{!! Str::words($new->paragraph1??'', 50, '...') !!}</p>
-                                <p class="vacancy__respond"><a href="{{route('article', $new->paragraph2)}}">Посмотреть</a></p>
+                                <p class="vacancy__info">{!! Str::words((app()->getLocale() == 'ru')?$new->paragraph1:$new->{'paragraph1_'.app()->getLocale()} ??'', 50, '...') !!}</p>
+                                <p class="vacancy__respond"><a href="{{route('article', $new->paragraph2)}}">@lang('loc.watch')</a></p>
                             </div>
                         </div>
                     </li>

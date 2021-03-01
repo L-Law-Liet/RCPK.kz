@@ -6,14 +6,14 @@
         <div class="modal__box__bid">
             <div class="modal__head text-center">
                 <button id="bidClose" class="modal__close__bid">X</button>
-                <h2>Заявка</h2>
+                <h2>@lang('loc.bid')</h2>
             </div>
             <div class="modal__body">
                 <form id="bidForm" action="{{route('bid')}}" method="post" class="form">
                     @csrf
-                    <label class="form__field"><input id="bidName" required type="text" name="name" placeholder="Имя" /></label>
-                    <label class="form__field"><input class="phone_mask" id="bidPhone" required type="text" name="phone" placeholder="Телефон" /></label>
-                    <button type="submit" class="btn btn_blue modal__btn">Отправить</button>
+                    <label class="form__field"><input id="bidName" required type="text" name="name" placeholder="@lang('loc.name')" /></label>
+                    <label class="form__field"><input class="phone_mask" id="bidPhone" required type="text" name="@lang('loc.phone')" placeholder="Телефон" /></label>
+                    <button type="submit" class="btn btn_blue modal__btn">@lang('loc.send')</button>
                 </form>
                 <div>
                     <h4 id="bidMess" style="text-align: center; margin-top: 1rem; color: #0037a8"></h4>

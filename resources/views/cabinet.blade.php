@@ -2,10 +2,10 @@
 @section('content')
 
     <p class="cabinet__link text-center" style="margin-bottom: 3rem;">
-        <a class="btn btn_blue open-modal-btn">Введите код</a>
+        <a class="btn btn_blue open-modal-btn" style="cursor: pointer">@lang('loc.input_code')</a>
 
         <a class="open-modal-btn-code"
-           style="display: block; margin-top: 1rem; cursor: pointer">Как получить код?</a>
+           style="display: block; margin-top: 1rem; cursor: pointer">@lang('loc.how_get_code')</a>
     </p>
       <!-- Cabinet -->
 
@@ -20,9 +20,8 @@
                           <div class="cabinet__item">
                               <h3>{{$course->title}}</h3>
                               <p class="cabinet__info">
-                                  {{$course->body}}
                               </p>
-                              <p class="cabinet__btn"><a  @if(session()->get('course_id') == $course->id)href="{{route('video', $course->id)}}" class="btn btn_blue" @else style="background: #777; color: white; padding: 0.5rem; cursor: not-allowed; border-radius: 4px" @endif>Пройти курс</a></p>
+                              <p class="cabinet__btn"><a  @if(session()->get('course_id') == $course->id)href="{{route('video', $course->id)}}" class="btn btn_blue" @else style="background: #777; color: white; padding: 0.5rem; cursor: not-allowed; border-radius: 4px" @endif>@lang('loc.pass_course')</a></p>
                           </div>
                       </div>
                   @endforeach

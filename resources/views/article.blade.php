@@ -9,7 +9,7 @@
         <!-- Box -->
 
         <div class="title">
-            <h1 class="title__page">{{$article->title}}</h1>
+            <h1 class="title__page">{{(app()->getLocale() == 'ru')?$article->title:$article->{'title_'.app()->getLocale()} }}</h1>
         </div>
         <div class="box clearfix">
             <div>
@@ -17,7 +17,7 @@
                     <img class="article-img" src="{{'/storage'.$article->image}}" alt="{{$article->title}}">
                 @endif
                 <span>
-                    {!! $article->paragraph1!!}
+                    {!! (app()->getLocale() == 'ru')?$article->paragraph1:$article->{'paragraph1_'.app()->getLocale()}!!}
                 </span>
             </div>
         </div>

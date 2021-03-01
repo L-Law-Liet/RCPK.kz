@@ -3,19 +3,146 @@
   <component name="ChangeListManager">
     <list default="true" id="9f6f7563-e07e-4048-893d-b0b5213d97e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/NewsUpdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/NewsUpdate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/GuestsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/GuestsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoursesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DocumentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DocumentsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TestsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Vacancy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Vacancy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/base.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/bg1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/bg2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/compatibility.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/f1.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/f2.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/f3.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/f4.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/f5.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/f6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/f7.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/f8.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/f9.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/fancy.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/theViewer.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/antiterror/Антитеррор.outline" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/base.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/bg1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/bg2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/compatibility.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/f1.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/f2.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/f3.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/f4.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/f5.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/f6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/f7.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/f8.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/f9.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/fa.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/fancy.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/theViewer.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/biot/БиОТ.outline" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/media.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/media.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/base.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/bg1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/bg2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/compatibility.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/f1.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/f10.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/f2.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/f3.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/f4.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/f5.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/f6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/f7.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/f8.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/f9.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/fa.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/fancy.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/fb.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/fc.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/fd.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/fe.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/ff.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/theViewer.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/paramedika/Парамедика.outline" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/base.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/bg1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/bg2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/compatibility.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/f1.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/f2.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/f3.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/f4.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/f5.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/f6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/f7.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/f8.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/f9.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/fa.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/fancy.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/fb.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/fc.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/fd.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/fe.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/ff.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ptm/theViewer.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sez/base.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sez/bg1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sez/bg2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sez/compatibility.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sez/f1.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sez/f2.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sez/f3.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sez/f4.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sez/f5.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sez/f6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sez/fancy.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sez/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sez/theViewer.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sez/СЭЗ.outline" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/article.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/docs/ptm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/docs/ptm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/change.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/change.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/reg.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/reg.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cabinet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cabinet.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/docs/antiterror.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/docs/biot.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/docs/paramedika.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/docs/ptm.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/docs/sez.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/docs/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/docs/template.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/breadcrumbs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/breadcrumbs.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/modals/bid.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/modals/bid.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/modals/code-help.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/modals/code-help.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/modals/code.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/modals/code.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/modals/gov.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/modals/gov.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/modals/vacancy.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/modals/vacancy.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mails/result-admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mails/result-admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sitemap.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/success.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/success.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vacancy.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vacancy.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/video.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/video.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="744c86b4-e9f5-442e-9efd-fb9f3d61ba96" name="sql with option idx" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -191,25 +318,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../studypage.kz" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\OpenServer\domains\nidge\RCAS\resources\views" />
+      <recent name="D:\OpenServer\domains\nidge\RCAS\resources\lang\kz" />
+      <recent name="D:\OpenServer\domains\nidge\RCAS\resources\lang\ru" />
       <recent name="D:\OpenServer\domains\nidge\RCAS\public\img\svg" />
       <recent name="D:\OpenServer\domains\nidge\RCAS\resources\views\mails" />
-      <recent name="D:\OpenServer\domains\nidge\RCAS\public\js" />
-      <recent name="D:\OpenServer\domains\nidge\RCAS\resources\views\layouts\modals" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\domains\nidge\RCAS\public\img\icons" />
+      <recent name="D:\OpenServer\domains\nidge\RCAS\resources\lang\ru" />
       <recent name="D:\OpenServer\domains\nidge\RCAS\resources\views\docs" />
       <recent name="D:\OpenServer\domains\nidge\RCAS\public" />
       <recent name="D:\OpenServer\domains\nidge\RCAS\resources\views" />
-      <recent name="D:\OpenServer\domains\nidge\RCAS\public\ptm" />
-      <recent name="D:\OpenServer\domains\nidge\RCAS\public\img\icons" />
     </key>
   </component>
   <component name="RunManager">
@@ -286,7 +414,14 @@
       <workItem from="1614006352561" duration="7093000" />
       <workItem from="1614050403524" duration="3880000" />
       <workItem from="1614062045975" duration="16878000" />
-      <workItem from="1614141114728" duration="14496000" />
+      <workItem from="1614141114728" duration="14760000" />
+      <workItem from="1614239228500" duration="12936000" />
+      <workItem from="1614310626833" duration="428000" />
+      <workItem from="1614418381862" duration="15938000" />
+      <workItem from="1614481545640" duration="3741000" />
+      <workItem from="1614490217381" duration="3823000" />
+      <workItem from="1614494069051" duration="23000" />
+      <workItem from="1614577981000" duration="7058000" />
     </task>
     <servers />
   </component>
