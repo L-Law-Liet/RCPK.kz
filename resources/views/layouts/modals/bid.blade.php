@@ -11,7 +11,7 @@
             <div class="modal__body">
                 <form id="bidForm" action="{{route('bid')}}" method="post" class="form">
                     @csrf
-                    <label class="form__field"><input id="bidName" required type="text" name="name" placeholder="@lang('loc.name')" /></label>
+                    <label class="form__field"><input id="bidName" required type="text" name="name" placeholder="@lang('loc.fullname')" /></label>
                     <label class="form__field"><input class="phone_mask" id="bidPhone" required type="text" name="@lang('loc.phone')" placeholder="Телефон" /></label>
                     <button type="submit" class="btn btn_blue modal__btn">@lang('loc.send')</button>
                 </form>

@@ -8,6 +8,7 @@
                 <li class="nav__item"><a href="{{route('sez')}}" class="nav__link {{(Route::currentRouteName() == 'sez')?'active':''}}">@lang('loc.sez')</a></li>
                 <li class="nav__item"><a href="{{route('antiterror')}}" class="nav__link {{(Route::currentRouteName() == 'antiterror')?'active':''}}">@lang('loc.antiterror')</a></li>
                 <li class="nav__item"><a href="{{route('paramedika')}}" class="nav__link {{(Route::currentRouteName() == 'paramedika')?'active':''}}">@lang('loc.paramedika')</a></li>
+                <li class="nav__item"><a href="{{route('contacts')}}" class="nav__link {{(Route::currentRouteName() == 'contacts')?'active':''}}">@lang('loc.agree_com')</a></li>
             </ul>
         </div>
         <div class="search-div" style="width: 80%; display: none;">

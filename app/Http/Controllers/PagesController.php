@@ -25,7 +25,7 @@ class PagesController extends Controller
         $organization_blocks = OrganizationBlock::all();
         $data['organization_blocks'] = $organization_blocks;
         $data['imgs'] = OrgSlider::all();
-        $data['news'] = Article::where('image', '<>', null)->orderBy('created_at', 'desc')->take(7)->get();
+        $data['news'] = Article::where('image', '<>', null)->orderBy('created_at', 'desc')->take(5)->get();
         return view('index', $data);
     }
     public function showRes(Request $request){
@@ -142,5 +142,9 @@ class PagesController extends Controller
         $vacancies = Vacancy::where('title', 'like', "%$search%")->get()->toArray();
         $data['list'] = array_merge($articles, $vacancies);
         return view('search', $data);
+    }
+    public function about(){
+        $text = 'site.about_'.App::getLocale();
+        return view('about', compact('text'));
     }
 }

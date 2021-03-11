@@ -40,7 +40,7 @@ Route::middleware('locale')->group(function (){
     Route::get('success', [TestsController::class, 'showSuccess'])->name('success');
     Route::get('news', [PagesController::class, 'showNews'])->name('news');
     Route::get('article/{id}', [PagesController::class, 'showArticle'])->name('article');
-    Route::get('about', [PagesController::class, 'staticPages'])->name('about');
+    Route::get('about', [PagesController::class, 'about'])->name('about');
     Route::get('study', [PagesController::class, 'staticPages'])->name('study');
     Route::get('contacts', [PagesController::class, 'staticPages'])->name('contacts');
     Route::get('faq', [PagesController::class, 'staticPages'])->name('faq');

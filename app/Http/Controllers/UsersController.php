@@ -20,7 +20,10 @@ class UsersController extends Controller
     }
     public function showCabinet(){
 //        dd(session()->all());
-        $data['courses'] = Course::all();
+        $language = 'рус';
+        if (App::getLocale() == 'kz')
+            $language = 'каз';
+        $data['courses'] = Course::where('title', 'like', '% - '.$language.'%')->get();
         $bread = 'Личный кабинет';
         switch (App::getLocale()){
             case 'en':

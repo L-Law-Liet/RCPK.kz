@@ -34,7 +34,7 @@
 <div class="modal_gov modal_code_gov">
     <div class="fullScreen flex-center p-0">
         <div class="modal__box__gov row"
-             style="background: white; overflow-y: auto; width: 100%; height: 100vh; margin: 0 20rem;">
+             style="background: white; overflow-y: auto; width: 100%; height: 100vh;">
             <div class="col-md-12">
                 <div class="tab">
                     <button class="tablinks active" onclick="openCity(event, 'London')">@lang('loc.ministr')</button>

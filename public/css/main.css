@@ -462,6 +462,7 @@ i.i-meloman {
     border-radius: 4px;
 }
 .news-block img {
+    border-radius: 4px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
@@ -478,7 +479,9 @@ i.i-meloman {
     background: #f5f5f5;
     border-radius: 5px;
 }
-
+.modal__box__gov {
+    margin: 0 20rem;
+}
 .society__icon {
   margin: 0 auto;
   display: block;

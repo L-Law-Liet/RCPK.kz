@@ -11,7 +11,7 @@
                                 <img style="vertical-align: middle;" src="{{asset('img/svg/chevron-down.svg')}}" alt="i">
                             </button>
                         </div>
-                        <img class="ml-md-5 ml-2 mt-2" style="vertical-align: middle; width: 64px; height: 28px" src="{{asset('img/svg/egov.svg')}}" alt="egov">
+                        <img onclick="window.location='https://egov.kz/cms/ru'" class="ml-md-5 ml-2 mt-2" style="cursor:pointer; vertical-align: middle; width: 64px; height: 28px" src="{{asset('img/svg/egov.svg')}}" alt="egov">
                     </div>
                     <div class="ml-md-5 pl-md-2 d-inline-block" style="vertical-align: middle">
                         <div class="d-flex justify-content-start mt-md-0 mt-2" style="cursor: pointer" onclick="window.location='https://www.gov.kz/memleket/entities/prokuror/documents/details/107345?lang=ru'">
@@ -22,7 +22,7 @@
                 </div>
                 <div class="d-flex justify-content-md-end justify-content-between flex-md-row">
                     <img onclick="window.location='https://wa.me/+77076878520'" class="mt-md-auto mt-2" style="width: 30.7px; height: 36px; cursor: pointer" src="{{asset('img/svg/whatsapp.svg')}}" alt="wp">
-                    <img onclick="window.location='https://www.instagram.com/rcpk_kz/'" class="ml-md-5 mt-md-auto mt-2" style="width: 30.7px; height: 36px; cursor: pointer" src="{{asset('img/svg/instagram.svg')}}" alt="insta">
+                    <img onclick="window.location='https://www.instagram.com/rcpk_kz/'" class="ml-md-4 mt-md-auto mt-2" style="width: 30.7px; height: 36px; cursor: pointer" src="{{asset('img/svg/instagram.svg')}}" alt="insta">
                     @guest
                         <a class="mt-2 ml-md-5 mob-lh-36px" style="color: white;" href="{{route('login')}}">@lang('loc.login')</a>
                         <a class="mt-2 ml-md-4 mob-lh-36px pl-md-2" style="color: white;" href="{{route('registration')}}">@lang('loc.reg')</a>
@@ -59,7 +59,7 @@
             @endphp
             <div class="logo d-flex align-items-center">
                 <a href="{{route('index')}}" class="logo__link"><img src="{{'/storage/'.setting('site.logo')}}" alt="Логотип"></a>
-                <p class="logo__txt" style="color: white">{{setting($site_title)}}</p>
+                <p class="logo__txt" style="color: white; font-size: 17px">{{setting($site_title)}}</p>
             </div>
 
             <!-- Navbar toggle -->
@@ -72,9 +72,12 @@
                 @include('layouts.nav')
                 <div class="relations d-lg-flex align-items-center">
                     <div class="relations__links text-right">
-                        <p class="relations__tel"><a style="color:#fff;" href="tel:{{setting('site.phone')}}">{{setting('site.phone')}}</a></p>
+                        <p class="relations__tel">
+                            <span style="color: white">Горячая линия</span><br>
+                            <a style="color:#fff;" href="tel:{{setting('site.phone')}}">{{setting('site.phone')}}</a>
+                        </p>
                     </div>
-                    <div class="relations__btn"><button style="background: #fff" class="ml-md-4 p-1 px-4 btn open-modal-btn-bid">@lang('loc.pass_edu')</button></div>
+                    <div class="relations__btn"><button style="background: #fff" class="ml-md-4 p-1 px-4 btn open-modal-btn-bid">@lang('loc.send_bid')</button></div>
                 </div>
 {{--                @include('layouts.log-in')--}}
             </div>

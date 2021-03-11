@@ -18,7 +18,7 @@
                                     <div class="row divided col-md-7 col-12 mx-md-0 pl-md-0">
                                         <div class="divided col-md-6 col-12 pl-md-0 pr-md-3">
                                             <div class="news-block" style="height: calc(100% - 2rem)">
-                                                <img src="{{asset('/storage/'.$news[0]->image)}}" alt="{{$news[0]->title}}">
+                                                <img height="203" width="100%" src="{{asset('/storage/'.$news[0]->image)}}" alt="{{$news[0]->title}}">
                                                 <div>
                                                     <div class="news-title">
                                                         <a style="color: black" href="{{route('article', $news[0]->paragraph2)}}">{{(app()->getLocale() == 'ru')?$news[0]->title:$news[0]->{'title_'.app()->getLocale()} }}</a>
@@ -31,8 +31,8 @@
                                         </div>
                                         <div class="divided col-md-6 col-12 pl-md-3 pr-md-0">
                                             @isset($news[1])
-                                                <div class="news-block" style="height: calc(100% - 2rem)">
-                                                    <img src="{{asset('/storage/'.$news[1]->image)}}" alt="{{$news[1]->title}}">
+                                                <div class="news-block"  style="height: calc(100% - 2rem)">
+                                                    <img height="203" width="100%" src="{{asset('/storage/'.$news[1]->image)}}" alt="{{$news[1]->title}}">
                                                     <div>
                                                     <div class="news-title">
                                                         <a style="color: black" href="{{route('article', $news[1]->paragraph2)}}">
@@ -108,10 +108,10 @@
                                         <h3 class="society__title">{{(app()->getLocale() == 'ru')?$block->title:$block->{'title_'.app()->getLocale()} }}</h3>
                                         <div class="society__info">
                                             <span class="society__percent flex-center">{{$block->percent}}%</span>
-                                            <ul class="society__list">
-                                                <li>{{(app()->getLocale() == 'ru')?$block->info1:$block->{'info1_'.app()->getLocale()} }}</li>
-                                                <li>{{(app()->getLocale() == 'ru')?$block->info2:$block->{'info2_'.app()->getLocale()} }}</li>
-                                            </ul>
+{{--                                            <ul class="society__list">--}}
+{{--                                                <li>{{(app()->getLocale() == 'ru')?$block->info1:$block->{'info1_'.app()->getLocale()} }}</li>--}}
+{{--                                                <li>{{(app()->getLocale() == 'ru')?$block->info2:$block->{'info2_'.app()->getLocale()} }}</li>--}}
+{{--                                            </ul>--}}
                                         </div>
                                     </div>
                                 </div>

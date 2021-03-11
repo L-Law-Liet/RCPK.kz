@@ -4,8 +4,7 @@
         <div style="overflow: auto">
             <div class="container">
                 @php
-                    $site_text = 'site.'.\Illuminate\Support\Facades\Route::currentRouteName().'_text';
-                    $site_text = (app()->getLocale() == 'ru') ? $site_text : $site_text.'_'.app()->getLocale();
+                    $site_text = 'site.'.\Illuminate\Support\Facades\Route::currentRouteName().'_text_'.app()->getLocale();
                 @endphp
                 <p style="font-size: 16px; text-align: justify">
                     {{setting($site_text)}}
