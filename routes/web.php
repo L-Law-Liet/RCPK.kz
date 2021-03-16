@@ -97,6 +97,7 @@ Route::middleware('locale')->group(function (){
         Route::get('paramedika', [DocumentsController::class, 'paramedika'])->name('paramedika');
         Route::get('ptm', [DocumentsController::class, 'ptm'])->name('ptm');
         Route::get('sez', [DocumentsController::class, 'sez'])->name('sez');
+        Route::get('council', [DocumentsController::class, 'council'])->name('council');
     });
 
 

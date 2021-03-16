@@ -1,14 +1,14 @@
 <nav class="nav" style="background: #1F3C88; border-top: 1px solid rgba(255, 255, 255, 0.2);">
     <div class="mx-md-5 px-md-5 mx-md-3 d-flex justify-content-between">
         <div class="nav-list">
-            <ul class="nav__list d-lg-flex">
+            <ul class="nav__list d-lg-flex" style="">
                 <li class="nav__item"><a href="{{route('about')}}" class="nav__link {{(Route::currentRouteName() == 'about')?'active':''}}">@lang('loc.about')</a></li>
                 <li class="nav__item"><a href="{{route('ptm')}}" class="nav__link {{(Route::currentRouteName() == 'ptm')?'active':''}}">@lang('loc.ptm')</a></li>
                 <li class="nav__item"><a href="{{route('biot')}}" class="nav__link {{(Route::currentRouteName() == 'biot')?'active':''}}">@lang('loc.biot')</a></li>
                 <li class="nav__item"><a href="{{route('sez')}}" class="nav__link {{(Route::currentRouteName() == 'sez')?'active':''}}">@lang('loc.sez')</a></li>
                 <li class="nav__item"><a href="{{route('antiterror')}}" class="nav__link {{(Route::currentRouteName() == 'antiterror')?'active':''}}">@lang('loc.antiterror')</a></li>
                 <li class="nav__item"><a href="{{route('paramedika')}}" class="nav__link {{(Route::currentRouteName() == 'paramedika')?'active':''}}">@lang('loc.paramedika')</a></li>
-                <li class="nav__item"><a href="{{route('contacts')}}" class="nav__link {{(Route::currentRouteName() == 'contacts')?'active':''}}">@lang('loc.agree_com')</a></li>
+                <li class="nav__item"><a href="{{route('council')}}" class="nav__link {{(Route::currentRouteName() == 'council')?'active':''}}">@lang('loc.agree_com')</a></li>
             </ul>
         </div>
         <div class="search-div" style="width: 80%; display: none;">

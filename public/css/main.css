@@ -125,7 +125,6 @@ body {
 .nav__link {
   color: #fff;
   display: block;
-  font-size: 12px;
   padding: 0 15px 0 0;
   font-weight: 600;
   line-height: 50px;
@@ -455,6 +454,10 @@ i.i-meloman {
 }
 .society .row {
   margin-top: 35px;
+}
+.about-body {
+    border-left: 1px #ccc solid;
+    text-align: justify;
 }
 .news-block {
     margin-bottom: 2rem;

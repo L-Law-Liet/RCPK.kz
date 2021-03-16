@@ -194,6 +194,9 @@
     .modal__box__gov {
         margin: 2rem;
     }
+    .about-body {
+        border-left: none;
+    }
     .langBtn {
         margin-top: 18px;
     }

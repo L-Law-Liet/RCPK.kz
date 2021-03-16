@@ -72,4 +72,15 @@ class DocumentsController extends Controller
         $data['breadcrumbs'] = [$bread];
         return view('docs.template', $data);
     }
+
+    public function council(){
+        $bread = 'Согласительная комиссия';
+        switch (App::getLocale()){
+            case 'kz':
+                $bread = 'Келісу комиссиясы';
+                break;
+        }
+        $data['breadcrumbs'] = [$bread];
+        return view('docs.template', $data);
+    }
 }
