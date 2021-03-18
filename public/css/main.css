@@ -288,6 +288,9 @@ body {
     width: 62.5%;
     margin-left: 1rem;
 }
+.orgs h3 {
+    font-size: 13px !important;
+}
 .sl-arrow .slick-arrow:before {
   display: none;
 }

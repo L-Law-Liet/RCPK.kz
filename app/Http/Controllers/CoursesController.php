@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CourseActivateRequest;
 use App\Models\Course;
 use App\Models\CourseCode;
 use App\Models\Material;
@@ -18,7 +19,6 @@ class CoursesController extends Controller
     private $service;
     public function __construct()
     {
-        $this->middleware(['auth']);
         $this->service = new CourseService();
     }
     public function showMaterial($id){
@@ -29,14 +29,15 @@ class CoursesController extends Controller
         $breadcrumbs = ['Видео'];
         return view('video', compact('material', 'breadcrumbs'));
     }
-    public function activate(Request $request){
-//        $course_code = CourseCode::where('code', $request->code)->where('user_id', auth()->id())->where('is_activated', false)->first();
-        $course_code = Course::where('body', $request->code)->first();
-        session()->forget(['course_id', 'course_code']);
-        if ($course_code){
-            session(['course_id' => $course_code->id]);
-            session(['course_code' => $request->code]);
-        }
-        return redirect()->route('cabinet');
+    public function activate(CourseActivateRequest $request){
+        $course = Course::where('body', $request->code)->firstOrFail();
+        session([
+            'name' => $request->name,
+            'email' => $request->email,
+            'code' => $request->code,
+            'course_id' => $course->id,
+            'lang' => $request->lang,
+        ]);
+        return redirect()->route('video', [$course->id]);
     }
 }

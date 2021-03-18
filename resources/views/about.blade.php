@@ -27,7 +27,7 @@
                     </div>
                     <div class="about-body col-md-8 pl-md-5 mt-md-0 mt-4">
                         <div class="mb-2">
-                            <h3>@lang('loc.about')</h3>
+                            <h3>@lang('loc.about_comm')</h3>
                         </div>
                         <div>
                             <p>{{setting($text)}}</p>

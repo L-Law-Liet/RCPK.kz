@@ -23,14 +23,6 @@
                 <div class="d-flex justify-content-md-end justify-content-between flex-md-row">
                     <img onclick="window.location='https://wa.me/+77076878520'" class="mt-md-auto mt-2" style="width: 30.7px; height: 36px; cursor: pointer" src="{{asset('img/svg/whatsapp.svg')}}" alt="wp">
                     <img onclick="window.location='https://www.instagram.com/rcpk_kz/'" class="ml-md-4 mt-md-auto mt-2" style="width: 30.7px; height: 36px; cursor: pointer" src="{{asset('img/svg/instagram.svg')}}" alt="insta">
-                    @guest
-                        <a class="mt-2 ml-md-5 mob-lh-36px" style="color: white;" href="{{route('login')}}">@lang('loc.login')</a>
-                        <a class="mt-2 ml-md-4 mob-lh-36px pl-md-2" style="color: white;" href="{{route('registration')}}">@lang('loc.reg')</a>
-                    @endguest
-                    @auth
-                        <a class="mt-2 ml-md-5 mob-lh-36px" style="color: white;" href="{{route('cabinet')}}">@lang('loc.cabinet')</a>
-                        <a class="mt-2 ml-md-4 pl-md-2 mob-lh-36px" style="color: white;" href="{{route('logout')}}">@lang('loc.logout')</a>
-                    @endauth
                     <div class="dropdown">
                         <button onclick="langDropdown()" class="d-flex mt-md-2 ml-md-4 pl-md-3 langBtn">
                             <span style="">

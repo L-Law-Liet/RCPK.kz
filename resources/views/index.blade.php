@@ -6,9 +6,9 @@
         .news-img-div {
             position: absolute; height: 100%; width: 100%;
             filter: blur(2px);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 300%
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: 200% !important;
         }
         .news-inner-img {
             top: 50%;
@@ -104,7 +104,7 @@
                 <!-- Row -->
 
                 <div class="d-flex justify-content-between flex-column flex-md-row">
-                    <div class="certificate p-5" style="border: 1px solid #e5e5e5; border-radius: 4px">
+                    <div class="certificate p-2">
                         <section>
                             <div>
 

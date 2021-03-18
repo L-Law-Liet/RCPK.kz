@@ -17,7 +17,6 @@ class TestsController extends Controller
     private $service;
     public function __construct()
     {
-        $this->middleware(['auth']);
         $this->service = new CourseService();
     }
 
@@ -41,7 +40,6 @@ class TestsController extends Controller
 //        $course_code->is_activated = true;
 //        $course_code->save();
 //        $data['course_code'] = $course_code;
-        session()->forget(['course_id', 'course_code']);
         return view('test', $data);
     }
     public function result(Test $test, Request $request){
@@ -50,12 +48,9 @@ class TestsController extends Controller
         $score = Option::whereIn('id', array_values($data))->where('isTrue', true)->count();
         $res['test'] = $test->title;
         $res['course'] = $test->course;
-        $user = Auth::user();
-        if (!$user){
-            return back();
-        }
-        $to_name = $user->fullname;
-        $to_email = $user->email;
+
+        $to_name = session()->get('name')??'';
+        $to_email = session()->get('email')??'';
         Mail::send('mails.result', $res, function($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)->subject('Результаты теста с '.env('APP_NAME'));
             $message->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
@@ -63,7 +58,8 @@ class TestsController extends Controller
         $result = "$score из $total";
 //        $courseCode->result = "$score из $total";
 //        $courseCode->save();
-        $res['user'] = $user;
+        $res['name'] = session()->get('name')??'';
+        $res['email'] = session()->get('email')??'';
         $res['course'] = $test->course;
         $res['result'] = $result;
         $to_name = env('APP_NAME');
