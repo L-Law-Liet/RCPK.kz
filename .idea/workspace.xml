@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f6f7563-e07e-4048-893d-b0b5213d97e1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/388f0d89-db7f-4e15-98ab-3f571a6b8757.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/388f0d89-db7f-4e15-98ab-3f571a6b8757.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoursesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TestsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DocumentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DocumentsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/kz/loc.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/kz/loc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ru/loc.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/loc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/media.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/media.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/docs/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/docs/template.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/modals/bid.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/modals/bid.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/modals/code.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/modals/code.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mails/result-admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mails/result-admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/breadcrumbs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/breadcrumbs.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
     </list>
     <list id="744c86b4-e9f5-442e-9efd-fb9f3d61ba96" name="sql with option idx" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +186,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../speedhack2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -207,11 +201,11 @@
       <recent name="D:\OpenServer\domains\nidge\RCAS\public\img\svg" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\domains\nidge\RCAS\public\img\other" />
       <recent name="D:\OpenServer\domains\nidge\RCAS\public\img\icons" />
       <recent name="D:\OpenServer\domains\nidge\RCAS\resources\lang\ru" />
       <recent name="D:\OpenServer\domains\nidge\RCAS\resources\views\docs" />
       <recent name="D:\OpenServer\domains\nidge\RCAS\public" />
-      <recent name="D:\OpenServer\domains\nidge\RCAS\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -306,7 +300,10 @@
       <workItem from="1615477732389" duration="43000" />
       <workItem from="1615889758822" duration="5404000" />
       <workItem from="1615968760812" duration="8073000" />
-      <workItem from="1616059515603" duration="583000" />
+      <workItem from="1616059515603" duration="881000" />
+      <workItem from="1616348432188" duration="740000" />
+      <workItem from="1616592134143" duration="3777000" />
+      <workItem from="1616659056490" duration="17034000" />
     </task>
     <servers />
   </component>

@@ -112,7 +112,9 @@
 
     <main class="main">
         @include('layouts.header')
-        @include('layouts.breadcrumbs')
+        @if(!str_contains(url()->current(), '/docs/'))
+            @include('layouts.breadcrumbs')
+        @endif
         @yield('content')
 
     </main>

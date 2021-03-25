@@ -191,6 +191,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+    .mobile-block .breadcrumb__item a, .mobile-block li.breadcrumb__item{
+        color: white !important;
+    }
     .modal__box__gov {
         margin: 2rem;
     }

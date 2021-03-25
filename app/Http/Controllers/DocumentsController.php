@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Block;
+use App\Models\BlockGoals;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
@@ -17,6 +19,8 @@ class DocumentsController extends Controller
                 $bread = 'БиОТ';
                 break;
         }
+        $data['block'] = Block::findOrFail(2);
+        $data['goals'] = BlockGoals::where('block_id', $data['block']->id)->get();
         $data['breadcrumbs'] = [$bread];
         return view('docs.template', $data);
     }
@@ -30,6 +34,8 @@ class DocumentsController extends Controller
                 $bread = 'Антитеррор';
                 break;
         }
+        $data['block'] = Block::findOrFail(4);
+        $data['goals'] = BlockGoals::where('block_id', $data['block']->id)->get();
         $data['breadcrumbs'] = [$bread];
         return view('docs.template', $data);
     }
@@ -43,6 +49,8 @@ class DocumentsController extends Controller
                 $bread = 'Парамедика';
                 break;
         }
+        $data['block'] = Block::findOrFail(5);
+        $data['goals'] = BlockGoals::where('block_id', $data['block']->id)->get();
         $data['breadcrumbs'] = [$bread];
         return view('docs.template', $data);
     }
@@ -56,6 +64,8 @@ class DocumentsController extends Controller
                 $bread = 'ПТМ';
                 break;
         }
+        $data['block'] = Block::findOrFail(1);
+        $data['goals'] = BlockGoals::where('block_id', $data['block']->id)->get();
         $data['breadcrumbs'] = [$bread];
         return view('docs.template', $data);
     }
@@ -69,6 +79,8 @@ class DocumentsController extends Controller
                 $bread = 'СЭЗ';
                 break;
         }
+        $data['block'] = Block::findOrFail(3);
+        $data['goals'] = BlockGoals::where('block_id', $data['block']->id)->get();
         $data['breadcrumbs'] = [$bread];
         return view('docs.template', $data);
     }
@@ -80,6 +92,8 @@ class DocumentsController extends Controller
                 $bread = 'Келісу комиссиясы';
                 break;
         }
+        $data['block'] = Block::findOrFail(6);
+        $data['goals'] = BlockGoals::where('block_id', $data['block']->id)->get();
         $data['breadcrumbs'] = [$bread];
         return view('docs.template', $data);
     }

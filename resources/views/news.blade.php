@@ -4,7 +4,7 @@
     <!-- Vacancy -->
 
     <section class="vacancy">
-        <div class="container">
+        <div class="px-md-5 mx-md-5 mx-3">
 
             <!-- Title -->
 

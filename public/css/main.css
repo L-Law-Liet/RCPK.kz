@@ -55,7 +55,9 @@ body {
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
 }
-
+.text-white {
+    color: #fff !important;
+}
 .btn {
   padding: 0 25px;
   font-size: 12px;
@@ -70,6 +72,10 @@ body {
 .btn_blue {
   color: #fff;
   background: #255dcf;
+}
+.btn_green {
+    color: #fff;
+    background: #27AE60;
 }
 
 .btn_blue:hover {
@@ -754,19 +760,18 @@ input[type="checkbox"]:checked + span:before {
 }
 
 .breadcrumb__item+.breadcrumb__item {
-  padding-left: 10px;
+  padding-left: 5px;
 }
 
 .breadcrumb__item+.breadcrumb__item::before {
-  content: "-";
-  color: #959595;
-  padding-right: 7px;
+  content: "/";
+  padding-right: 2px;
   display: inline-block;
 }
 
-.breadcrumb__item {
-  color: #1a4190;
-  font-size: 12px;
+.breadcrumb__item, .breadcrumb__item a {
+  color: #333;
+  font-size: 16px;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -775,10 +780,6 @@ input[type="checkbox"]:checked + span:before {
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
-}
-
-.breadcrumb__item a {
-  color: #959595;
 }
 
 .breadcrumb__item a:hover {
