@@ -18,6 +18,13 @@
             </form>
         </div>
         <div class="my-5">
+            @foreach($blocks as $block)
+                <div class="my-3 py-2" style="border-bottom: 1px solid #ccc">
+                    <h3 style="cursor: pointer"
+                        onclick="window.location='{{route($block->url)}}'"
+                        class="mb-2">{{ $block->{'title_'.app()->getLocale()} }}</h3>
+                </div>
+            @endforeach
             @foreach($list as $item)
                 <div class="my-3 py-2" style="border-bottom: 1px solid #ccc">
                     <h3 style="cursor: pointer"

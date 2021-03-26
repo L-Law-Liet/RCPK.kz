@@ -2,7 +2,7 @@
 
     <!-- Breadcrumb -->
     @php
-    $array = ['antiterror', 'council'];
+        $array = ['antiterror', 'council', 'paramedika', 'sez'];
     @endphp
     <nav class="breadcrumb">
         <div class="px-md-5 mx-md-5 mx-3">

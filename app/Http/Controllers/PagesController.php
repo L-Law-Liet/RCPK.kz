@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Bid;
+use App\Models\Block;
 use App\Models\CommunityBlock;
 use App\Models\HeaderSlide;
 use App\Models\Option;
@@ -140,6 +141,12 @@ class PagesController extends Controller
         $data['search'] = trim($search);
         $articles = Article::where('title', 'like', "%$search%")->get()->toArray();
         $vacancies = Vacancy::where('title', 'like', "%$search%")->get()->toArray();
+        if (str_contains(mb_strtolower($search), 'обучение')){
+            $data['blocks'] = Block::all();
+        }
+        else {
+            $data['blocks'] = Block::where('title_'.\app()->getLocale(), 'like', '%'.$search.'%')->get();
+        }
         $data['list'] = array_merge($articles, $vacancies);
         return view('search', $data);
     }

@@ -15,6 +15,7 @@ class CreateBlocksTable extends Migration
     {
         Schema::create('blocks', function (Blueprint $table) {
             $table->id();
+            $table->string('url')->nullable();
             $table->string('title_ru')->nullable();
             $table->string('title_kz')->nullable();
             $table->text('image')->nullable();
